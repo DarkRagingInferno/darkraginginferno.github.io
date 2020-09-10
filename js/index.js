@@ -1,5 +1,5 @@
 function buttonPress(){
-    window.location.href='./index.html';
+    window.location.href='../index.html';
 }
 
 function submitPress(){
