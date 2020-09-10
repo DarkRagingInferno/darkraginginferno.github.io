@@ -3,7 +3,7 @@
 } */
 
 body {
-    background-image: url('../assets/img/Fred_young.png');
+    background-image: url('../../assets/img/lab1/Fred_young.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

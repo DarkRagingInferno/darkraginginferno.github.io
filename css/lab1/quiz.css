@@ -1,5 +1,5 @@
 body {
-    background-image: url('../assets/img/rezero.jpg');
+    background-image: url('../../assets/img/lab1/rezero.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,6 +13,7 @@ body {
 
 .button {
     width: 125px;
+    margin-top: 30px;
 }
 
 .blue {

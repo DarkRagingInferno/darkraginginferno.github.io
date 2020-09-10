@@ -3,6 +3,6 @@ function buttonPress(){
 }
 
 function submitPress(){
-    window.location.href='./COMP4537.html';
+    window.location.href='../../../COMP4537.html';
 }
 
