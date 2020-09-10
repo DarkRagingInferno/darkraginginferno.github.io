@@ -1,0 +1,55 @@
+body {
+    background-image: url('../assets/img/walldrop2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1px;
+    border-style: ridge;
+    border-color: lightgray;
+    padding-top: 20px;
+    background-image: url('../assets/img/walldrop.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.lab-list {
+    font-size: 30px;
+}
+
+.lab {
+    text-decoration: none;
+}
+
+.lab:hover {
+    color: blue;
+}
+
+.border-style {
+    width: 450px;
+    
+    border-radius: 1px;
+    border-style: ridge;
+    border-color: lightgray;
+}
+
+.title {
+    text-align: center;
+}
+
+li {
+    margin-right: 20px;
+    list-style-type: none;
+    border-bottom: 1px ridge lightgray
+}
+
+button {
+    margin: 20px;
+}

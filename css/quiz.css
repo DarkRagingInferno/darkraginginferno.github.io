@@ -1,0 +1,33 @@
+body {
+    background-image: url('../assets/img/rezero.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    width: 125px;
+}
+
+.blue {
+    color: lightseagreen;
+}
+
+.red {
+    color: palevioletred;
+}
+
+.purple {
+    color: purple;
+}
+
+.green {
+    color: green;
+}
+
