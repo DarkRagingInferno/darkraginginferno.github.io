@@ -65,11 +65,11 @@ function createColumn(numCol)
 function setBlockDimensions(windowWidth, windowHeight) 
 {
     console.log('hello')
-    let adjustedWidth = Math.floor(mobileDimension / windowWidth)
-    let adjustedHeight = Math.floor(mobileDimension / windowHeight)
+    let adjustedWidth = mobileDimension / windowWidth
+    let adjustedHeight = mobileDimension / windowHeight
 
-    width = windowHeight * adjustedWidth;
-    height = windowHeight * adjustedHeight;
+    width = Math.floor(windowHeight * adjustedWidth);
+    height = Math.floor(windowHeight * adjustedHeight);
     
     console.log(adjustedWidth, adjustedHeight);
     console.log(width, height);
