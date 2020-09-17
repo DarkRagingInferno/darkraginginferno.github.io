@@ -1,10 +1,14 @@
-var width = window.innerWidth;
-var height = window.innerHeight;
+var windoWidth = window.innerWidth;
+var windowHeight = window.innerHeight;
+var width = 0;
+var height = 0;
 var screenWidthPerc = 0.11;
 var screenHeightPerc = 0.055;
+var mobileDimension = 45;
 
 function createGame(row, col) 
-{
+{   
+    setBlockDimensions(windoWidth, windowHeight)
     setGame(row, col);
 }
 
@@ -41,7 +45,6 @@ function createRows(numRows)
 
 function createColumn(numCol) 
 {    
-    console.log(width, height)
     if(numCol == -1) return;
 
     let gridRows = Array.from(document.getElementsByClassName('row'));
@@ -51,12 +54,21 @@ function createColumn(numCol)
 
         div.setAttribute('class', 'col block');
         div.setAttribute('onclick', 'colorTile(this)');
-        div.style.cssText = `width: ${width * screenWidthPerc}px; height: ${height * screenHeightPerc}px`
+        div.style.cssText = `width: ${width}px; height: ${height}px`
         // div.innerHTML = 'This is a col';
         row.appendChild(div)
         // console.log('Created row');
     }
     return createColumn(numCol - 1);
+}
+
+function setBlockDimensions(width, height) 
+{
+    let adjustedWidth = Math.floor(mobileDimension / width)
+    let adjustedHeight = Math.floor(mobileDimension / height)
+
+    width = windowHeight * adjustedWidth;
+    height = windowHeight * adjustedHeight
 }
 
 
