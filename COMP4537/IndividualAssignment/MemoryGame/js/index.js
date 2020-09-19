@@ -2,8 +2,6 @@ var windoWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 var width = 0;
 var height = 0;
-// var screenWidthPerc = 0.11;
-// var screenHeightPerc = 0.055;
 var mobileDimension = 45;
 
 function createGame(row, col) 
@@ -65,15 +63,15 @@ function createColumn(numCol)
 function setBlockDimensions(windowWidth, windowHeight) 
 {
     console.log('hello')
-    let adjustedWidth = mobileDimension / windowWidth
-    let adjustedHeight = mobileDimension / windowHeight
+    let adjustedWidth = mobileDimension / windowWidth;
+    let adjustedHeight = mobileDimension / windowHeight;
 
-    width = Math.floor(windowHeight * adjustedWidth);
+    width = Math.floor(windowWidth * adjustedWidth);
     height = Math.floor(windowHeight * adjustedHeight);
     
-    console.log(adjustedWidth, adjustedHeight);
-    console.log(width, height);
-    console.log(windoWidth, windowHeight)
+    console.log('this is adjusted: ', adjustedWidth, adjustedHeight);
+    console.log('this is dimensions: ',width, height);
+    console.log('this is widnow: ', windoWidth, windowHeight);
 }
 
 

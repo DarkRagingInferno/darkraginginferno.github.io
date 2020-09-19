@@ -2,19 +2,20 @@ var timer        = null;
 var whitFlash    = null;
 var rotate       = null;
 var canClick     = false;
-var maxClicks    = 2;
+var maxClicks    = 1; //2
 var clickCounter = 0;
 var correctTiles = [];
-var rowCount     = 1;
-var colCount     = 1;
-var tileCount    = 2;
+var rowCount     = 6; //1
+var colCount     = 6; //1
+var tileCount    = 1; //2
 var score        = 0;
+var kingOfGames  = 0;
 
 
 window.onload = () => {
     createGame(rowCount, colCount);
     getBlocks();
-    flashCorrectTiles(2);
+    flashCorrectTiles(tileCount);
     setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);
 }
 
@@ -58,10 +59,10 @@ function flashCorrectTiles(tiles)
     
     whiteFlash = setTimeout(() => {colorWhite(); 
                                     setTimeout(() => {animationRotate();} , 1000); 
-                                    if (rowCount >= 5) setTimeout(() => {secondRotate();} , 2000);} 
+                                    if (colCount == 6 && kingOfGames != 0) setTimeout(() => {secondRotate();} , 2000); 
+                                    else kingOfGames = 0;}
                                     , 3500);
     setTimeout(() => {clearTimeout; clearTimeout; canClick = true; correctTiles = getAnswerTiles();}, 5000, whiteFlash, rotate);
-
 }
 
 function threeSecCountDown(tiles) 
@@ -122,6 +123,9 @@ function evaluateGame()
         if (colCount === 6)
         {
             getOutput('correct');
+            kingOfGames++;
+            clickCounter = 0;
+            tileCount = 10;
             setTimeout(newGame, 1500, rowCount, colCount);
         }
         else 
