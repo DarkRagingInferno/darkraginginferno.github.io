@@ -65,8 +65,8 @@ body {
 @media only screen and (min-width: 700px)
 {
     .col {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     margin: 3px;
     box-shadow: 1px 1px 10px 2px pink;
     border-radius: 5px;
