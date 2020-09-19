@@ -58,11 +58,12 @@ function flashCorrectTiles(tiles)
     threeSecCountDown(tiles)
     
     whiteFlash = setTimeout(() => {colorWhite(); 
-                                    setTimeout(() => {animationRotate();} , 1000); 
+                                    setTimeout(() => {animationRotate();} , 1000);
+                                    canClick = false; 
                                     if (colCount == 6 && kingOfGames != 0) setTimeout(() => {secondRotate();} , 2000); 
                                     else kingOfGames = 0;}
                                     , 3500);
-    setTimeout(() => {clearTimeout; clearTimeout; canClick = true; correctTiles = getAnswerTiles();}, 5000, whiteFlash, rotate);
+    setTimeout(() => {clearTimeout; clearTimeout; correctTiles = getAnswerTiles(); canClick = true; console.log('OKAY now you can click')}, 5000, whiteFlash, rotate);
 }
 
 function threeSecCountDown(tiles) 
@@ -75,6 +76,7 @@ function threeSecCountDown(tiles)
 function colorTile(self)
 {
     let output = "";
+    if(checkColor(self)) return;
     if (canClick && clickCounter < maxClicks)
     {
         if(checkCorrect(self)) 
@@ -110,7 +112,6 @@ function evaluateGame()
     let tiles      = Array.from(correctTiles);
     let perfectRun = true;
 
-    // animationFlip();
     tiles.forEach(el => {
         if(el.style.backgroundColor != 'blue') perfectRun = false;
     });
@@ -126,16 +127,16 @@ function evaluateGame()
             kingOfGames++;
             clickCounter = 0;
             tileCount = 10;
-            setTimeout(newGame, 1500, rowCount, colCount);
+            let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
+            setTimeout(clearTimeout, 1600, startNewGame);
         }
         else 
         {
             getOutput('correct');
             increaseGrid(rowCount, colCount);
-            // newGame(rowCount, colCount);
-            setTimeout(newGame, 1500, rowCount, colCount);
+            let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
+            setTimeout(clearTimeout, 1600, startNewGame);
         }
-
     }
     else
     {
@@ -143,13 +144,15 @@ function evaluateGame()
         {
             getOutput('wrong');
             resetGame()
-            setTimeout(newGame, 1500, rowCount, colCount); 
+            let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
+            setTimeout(clearTimeout, 1600, startNewGame); 
         }
         else 
         {
             getOutput('wrong');
             decreaseGrid(rowCount, colCount);
-            setTimeout(newGame, 1500, rowCount, colCount);
+            let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
+            setTimeout(clearTimeout, 1600, startNewGame);
         }
     } 
 }

@@ -12,6 +12,11 @@ function getBlocks()
     blockArr   = arr;
 }
 
+function checkColor(self) {
+    if(self.style.backgroundColor == 'blue') return true;
+    else false;
+}
+
 function colorBlue(self)
 {
     self.style.backgroundColor = 'blue';
@@ -118,10 +123,9 @@ function setScore(newScore)
 function getOutput(result)
 {
     let output = document.getElementById('output');
-    
-    if (result == 'correct')
-        output.innerHTML = 'I knew you could do it!'
-    else output.innerHTML = "Dang it bro cmon"
+    if (result == WIN )
+        output.innerHTML = gameOutput(WIN)
+    else output.innerHTML = gameOutput(LOSS)
 }
 
 function removeOutput() 
