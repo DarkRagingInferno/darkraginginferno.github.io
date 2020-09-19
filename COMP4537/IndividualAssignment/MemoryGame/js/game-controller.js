@@ -2,12 +2,12 @@ var timer        = null;
 var whitFlash    = null;
 var rotate       = null;
 var canClick     = false;
-var maxClicks    = 1; //2
+var maxClicks    = 2; //2
 var clickCounter = 0;
 var correctTiles = [];
-var rowCount     = 6; //1
-var colCount     = 6; //1
-var tileCount    = 1; //2
+var rowCount     = 1; //1
+var colCount     = 1; //1
+var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
 
