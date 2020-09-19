@@ -140,6 +140,7 @@ input {
     width: 300px;
     font-size: 70px;
     border-radius: 20px;
+    text-align: center;
 }
 
 .scoring-label, #score {
