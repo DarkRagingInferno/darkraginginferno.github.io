@@ -28,6 +28,10 @@ const loseOutputs = [
     "I expected better..."
 ]
 
+/**
+ * 
+ * @param {*} winLossString 
+ */
 function gameOutput(winLossString) 
 {
     let index = Math.floor(Math.random() * winOutputs.length);

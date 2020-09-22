@@ -1,3 +1,12 @@
+/**
+ * This JS File has all the logic and function for managing the state of the 
+ * game. It determines when to create a game and when the display of the game
+ * should change.
+ * @author John Poku
+ * @since  09.15.2020
+ */
+
+ 
 var timer        = null;
 var whitFlash    = null;
 var rotate       = null;
@@ -11,7 +20,10 @@ var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
 
-
+/**
+ *  This anonymous function loads as soon as the window is ready. It creates, sets
+ * and begins a memory game.
+ */
 window.onload = () => {
     createGame(rowCount, colCount);
     getBlocks();
@@ -19,6 +31,9 @@ window.onload = () => {
     setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);
 }
 
+/**
+ * This function creates a new game.
+ */
 function newGame() 
 {
     removeOutput(); 
@@ -29,6 +44,9 @@ function newGame()
     console.log('Created new game');
 }
 
+/**
+ * This function restarts and creates a new 2x2 game.
+ */
 function restartGame() {
     score = 0;
     resetGame()
@@ -42,6 +60,9 @@ function restartGame() {
     console.log('Restarted Game');
 }
 
+/**
+ * This function terminates the current game
+ */
 function terminate()
 { 
     deleteGrid();
@@ -52,27 +73,45 @@ function terminate()
     console.log('Terminated the game');
 }
 
+/**
+ * This function mimicks the behaviour of flashing a tile by turning the selected
+ * tiles' color white after a set amount of time (3.5 seconds).
+ * @param {Int} tiles The number of correct tiles. 
+ */
 function flashCorrectTiles(tiles) 
 {
     // console.log('I AM FLASHING YOU!');
-    threeSecCountDown(tiles)
+    twoSecCountDown(tiles)
     
     whiteFlash = setTimeout(() => {colorWhite(); 
                                     setTimeout(() => {animationRotate();} , 1000);
                                     canClick = false; 
                                     if (colCount == 6 && kingOfGames != 0) setTimeout(() => {secondRotate();} , 2000); 
-                                    else kingOfGames = 0;}
-                                    , 3500);
-    setTimeout(() => {clearTimeout; clearTimeout; correctTiles = getAnswerTiles(); canClick = true; console.log('OKAY now you can click')}, 5000, whiteFlash, rotate);
+                                    else kingOfGames = 0;}, 3500);
+    setTimeout(() => {clearTimeout;
+                         clearTimeout; 
+                         correctTiles = getAnswerTiles(); 
+                         canClick = true; 
+                         console.log('OKAY now you can click')}, 5000, whiteFlash, rotate);
 }
 
-function threeSecCountDown(tiles) 
+/**
+ * This function makes the game wait 2 seconds before executing the function
+ * to turn the correct tiles blue to display to the user.
+ * @param {Int} tiles The number of correct tiles.
+ */
+function twoSecCountDown(tiles) 
 {
     // console.log("3, 2, 1, GO!");
     timer = setTimeout(targetTiles, 2000, tiles);
     setTimeout(clearTimeout, 2100, timer);
 }
 
+/**
+ * This function takes in a javascript object and sets it background color to be
+ * blue.
+ * @param {javascript object} self The object that made the call.
+ */
 function colorTile(self)
 {
     let output = "";
@@ -101,11 +140,19 @@ function colorTile(self)
     else return;
 }
 
+/**
+ * This function checks to see if this click event is the last click of the user
+ * in order to determine when to evaluate the game.
+ */
 function isLastClick(){
     if(clickCounter === maxClicks) evaluateGame();
     else return;
 }
 
+/**
+ * This function evaluates whether the grid for a newgame should be increased or 
+ * decreased basedd on whether they got all the correct tiles or not.
+ */
 function evaluateGame() 
 {
     canClick       = false;
@@ -157,8 +204,15 @@ function evaluateGame()
     } 
 }
 
+/**
+ * This function increases the row or the grid counts. It determines which one
+ * by comparing the row to the col. 
+ * @param {row} row The number of rows in the grid.
+ * @param {col} col The number of cols in the grid.
+ */
 function increaseGrid(row, col) 
 {
+    // If row is equal to col then increase row else increase col count.
     if(row === col) 
     {
         rowCount++;
@@ -175,8 +229,15 @@ function increaseGrid(row, col)
     }
 }
 
+/**
+ * This function decreases the row or the grid counts. It determines which one
+ * by comparing the row to the col. 
+ * @param {row} row The number of rows in the grid.
+ * @param {col} col The number of cols in the grid.
+ */
 function decreaseGrid(row, col)
 {
+    // If row is equal to col then decrease col else increase row count.
     if (row === col)
     {
         colCount--;
@@ -193,11 +254,19 @@ function decreaseGrid(row, col)
     }
 }
 
+/**
+ * This function checks if the tile selected is one of the correct tiles. It 
+ * checks if a javascript object is in a Set of objects and returns a boolean.
+ * @param {javascript object} self 
+ */
 function checkCorrect(self) 
 {
     if(correctTiles.has(self)) return true; return false;
 }
 
+/**
+ * This function resets the game constants to default values.
+ */
 function resetGame()
 {
     rowCount = 1;

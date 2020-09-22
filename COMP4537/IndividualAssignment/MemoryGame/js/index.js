@@ -1,15 +1,33 @@
+/**
+ * This JS file does all the logic for creating the grid of the game. It creates
+ * the game sets the grid, rows, and columns
+ *
+ * @author John Poku
+ * @since  09.15.2020
+ */
+
 var windoWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
 var width = 0;
 var height = 0;
 var mobileDimension = 45;
 
+/**
+* This function creates the game.
+* @param {Int} row  The number of rows in the grid.
+* @param {col} col  The number of columns in the grid.    
+*/
 function createGame(row, col) 
 {   
     setBlockDimensions(windoWidth, windowHeight)
     setGame(row, col);
 }
 
+/**
+* This function sets the game 
+* @param {Int} row  The number of rows in the grid.
+* @param {col} col  The number of columns in the grid.    
+*/
  function setGame(row, col) 
  {
     createGrid();
@@ -17,6 +35,10 @@ function createGame(row, col)
     createColumn(col);
  }
 
+
+/** 
+* This function creates the grid. 
+*/
 function createGrid() 
 {
     let gridContainer = document.getElementById('grid-container');
@@ -26,6 +48,10 @@ function createGrid()
     gridContainer.appendChild(div);
 }
 
+/**
+* This function creates the rows for the grid.
+* @param {Int} numRow  The number of rows in the grid.  
+*/
 function createRows(numRows) 
 {
     if(numRows == -1) return console.log(`I came back ${numRows}`); 
@@ -41,6 +67,10 @@ function createRows(numRows)
     return createRows(numRows - 1);
 }
 
+/**
+* This function creates the columns in the rows.
+* @param {Int} numCol  The number of columns in the grid.  
+*/
 function createColumn(numCol) 
 {    
     if(numCol == -1) return;
@@ -60,6 +90,11 @@ function createColumn(numCol)
     return createColumn(numCol - 1);
 }
 
+/**8
+* This function sets the dimensions of the columns (blocks)
+* @param {Int} windowWidth The width of the current window.
+* @param {Int} windowHeight The height of the current window.
+*/
 function setBlockDimensions(windowWidth, windowHeight) 
 {
     console.log('hello')

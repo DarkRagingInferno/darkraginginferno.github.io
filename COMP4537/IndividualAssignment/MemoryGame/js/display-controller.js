@@ -1,10 +1,18 @@
-
+/**
+ * This JS File has all the logic and functions for changing and managing the 
+ * display of the game.
+ * @author John Poku
+ * @since  09.15.2020
+ */
 
 var blockArr    = [];
 var answerTiles = [];
 var rotated = false;
 var degree;
 
+/**
+ * This function gets all the blocks (columns) in the grid of the game.
+ */
 function getBlocks() 
 {
     let blocks = document.body.getElementsByClassName('block');
@@ -12,22 +20,38 @@ function getBlocks()
     blockArr   = arr;
 }
 
+/**
+ * This function takes in a javascript object and checks if it's color is blue.
+ * @param {javascript object} self The javascript object to be checked.
+ */
 function checkColor(self) {
     if(self.style.backgroundColor == 'blue') return true;
     else false;
 }
 
+/**
+ * This function takes in a javascript object and turns it's background color 
+ * blue.
+ * @param {javascript object} self 
+ */
 function colorBlue(self)
 {
     self.style.backgroundColor = 'blue';
 }
 
+/**
+ * This function takes in a javascript object and turns it's background color 
+ * red.
+ * @param {javscript object} self 
+ */
 function colorRed(self)
 {
     self.style.backgroundColor = 'red';
 }
 
-
+/**
+ * This function takes all selected correct tiles and turns them white.
+ */
 function colorWhite() {
     // console.log('FLASHING YOU AGAIN')
     // console.log('WHITE BOY')
@@ -35,6 +59,11 @@ function colorWhite() {
     answerTiles.forEach( el => { el.style.backgroundColor = 'white'; })
 }
 
+/**
+ * This function gets all the blocks (columns) in the grid and returns a Set of 
+ * randomly selected tiles (correct tiles).
+ * @param {Int} numTiles 
+ */
 function targetTiles(numTiles) 
 {   
     console.log('Grabbing tiles')
@@ -43,11 +72,16 @@ function targetTiles(numTiles)
     answerTiles = selectedRandomTiles;
 }
 
-function getRandomBlocks(randomCount, arrayOfBlocks) 
+/**
+ * 
+ * @param {Int} numTiles The number of tiles to be selected .
+ * @param {*} arrayOfBlocks An array of javascript objects (columns/blocks).
+ */
+function getRandomBlocks(numTiles, arrayOfBlocks) 
 {
     let randomSelections = new Set();
     let i = 0;
-    while (i < randomCount)
+    while (i < numTiles)
     {
         let randomSelection = blockArr[Math.floor(Math.random() * arrayOfBlocks.length)];
         if (!randomSelections.has(randomSelection)) 
@@ -59,6 +93,9 @@ function getRandomBlocks(randomCount, arrayOfBlocks)
     return randomSelections;
 }
 
+/**
+ * This function deletes the grid and all its children.
+ */
 function deleteGrid() 
 {
     let grid   = document.getElementById('grid');
@@ -66,6 +103,10 @@ function deleteGrid()
     console.log('Deleted the grid');
 }
 
+/**
+ * This function deletes the loss div or loss screen that is displayed when a 
+ * user loses.
+ */
 function deleteLoseDiv() 
 {
     let loseDiv = document.getElementById('lose-div');
@@ -73,6 +114,9 @@ function deleteLoseDiv()
     console.log('Deleted the loss Div');
 }
 
+/**
+ * This function creates a loss screen to display to the user.
+ */
 function createLoseScreen() 
 {
     let gridContainer = document.getElementById('grid-container');
@@ -97,6 +141,9 @@ function createLoseScreen()
     gridContainer.appendChild(lostDiv);
 }
 
+/**
+ * This function creates a terminate button.
+ */
 function createTerminateBTN() 
 {
     let gridContainer = document.getElementById('container');
@@ -109,17 +156,28 @@ function createTerminateBTN()
     gridContainer.appendChild(terminateBTN);
 }
 
+/**
+ * This function returns the answer tiles (correct tiles).
+ */
 function getAnswerTiles() 
 {
     return answerTiles;
 }
 
+/**
+ * This function takes in a new score and sets the score displayed on the screen.
+ * @param {Int} newScore The new score.
+ */
 function setScore(newScore) 
 {
     let scoreDiv = document.getElementById('score');
     scoreDiv.innerHTML = newScore;
 }
 
+/**
+ * This function takes in a result 
+ * @param {String} result The constant string.
+ */
 function getOutput(result)
 {
     let output = document.getElementById('output');
@@ -128,12 +186,19 @@ function getOutput(result)
     else output.innerHTML = gameOutput(LOSS)
 }
 
+/**
+ * This function removes the out from the output div and replaces it with an
+ * empty string.
+ */
 function removeOutput() 
 {
     let output = document.getElementById('output');
     output.innerHTML = '';
 }
 
+/**
+ * This function rotates the grid.
+ */
 function animationRotate() {
     let angleArr = [-180, -90, 90, 180];
     let index = Math.floor(Math.random() * angleArr.length);
@@ -150,6 +215,9 @@ function animationRotate() {
     degree = angleArr[index]
 }
 
+/**
+ * this function flips all the correct tiles.
+ */
 function animationFlip() {
     let arr = answerTiles;
     angle = 0;
@@ -170,6 +238,9 @@ function animationFlip() {
 
 }
 
+/**
+ * This function rotates the grid for second time.
+ */
 function secondRotate() {
     let angleArr = [-90, 90];
     let index = Math.floor(Math.random() * angleArr.length);
