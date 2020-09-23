@@ -63,6 +63,7 @@
      */
     window.onload = () => {
         let numQuestions = userPrompt();
+        console.log(numQuestions)
         displayQuestions(quizArr, numQuestions);
     }
 
@@ -70,18 +71,20 @@
      * This funciton prompts a user for an integer and returns that integer
      */
     function userPrompt() {
-        var numberOfQuestions = prompt("Enter the number of questions you want Max: 5 and Min: 1");
+        let numberOfQuestions = prompt("Enter the number of questions you want Max: 5 and Min: 1");
+        let integer = 0;
         try {
-            let integer = parseInt(numberOfQuestions)
+            integer = parseInt(numberOfQuestions)
             console.log('hello this is ', integer)
-            if(isNaN(integer)) userPrompt();
+            // if(isNaN(integer)) return userPrompt();
 
-            if(integer < 0 || integer > 5)
+            if(isNaN(integer) || integer < 0 || integer > 5)
                 throw Exception
             else return integer
         } catch (Exception) {
-            userPrompt();
+            return userPrompt();
         }
+        return integer
     }
 
     /**
