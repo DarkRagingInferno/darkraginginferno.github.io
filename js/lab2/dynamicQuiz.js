@@ -44,7 +44,7 @@
         {
             "question": "5) What is the correct syntax for referring to an external script called 'bork.js?'",
             "answers": [
-                        "'&lt;script src='bork.js&gt;'",
+                        "'&ltscript src='bork.js&gt'",
                         "'&ltscript href='bork.js&gt'",
                         "'&ltscript ref='bork.js&gt'",
                         "'&ltscript name='bork.js&gt'"
