@@ -72,9 +72,13 @@
     function userPrompt() {
         var numberOfQuestions = prompt("Enter the number of questions you want Max: 5 and Min: 1");
         try {
-            if(numberOfQuestions < 1 || numberOfQuestions > 5)
+            let integer = parseInt(numberOfQuestions)
+            console.log('hello this is ', integer)
+            if(isNaN(integer)) userPrompt();
+
+            if(integer < 0 || integer > 5)
                 throw Exception
-            else return numberOfQuestions
+            else return integer
         } catch (Exception) {
             userPrompt();
         }
