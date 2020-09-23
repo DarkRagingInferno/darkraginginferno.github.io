@@ -1,4 +1,9 @@
-
+/**
+ * This JS File dynamically generates multiple choice quiz questions loaded in from an Array of JSON's and displays it to the 
+ * screen. It it takes in user input to decide how many questions with a max questions and a minimum of 1 question.
+ * @author John Poku
+ * @since 09.23.2020
+ */
     var quizArr = [
         {
             "question": "1) How do you create a function in JavaScript?",
@@ -53,16 +58,40 @@
         },
     ]
 
+    /** 
+     * This functions waits for the window and dom to finish loading and then begins to generate the quiz.
+     */
     window.onload = () => {
-        displayQuestions(quizArr);
+        let numQuestions = userPrompt();
+        displayQuestions(quizArr, numQuestions);
     }
 
-    function displayQuestions(arr) 
+    /**
+     * This funciton prompts a user for an integer and returns that integer
+     */
+    function userPrompt() {
+        var numberOfQuestions = prompt("Enter the number of questions you want Max: 5 and Min: 1");
+        try {
+            if(numberOfQuestions < 1 || numberOfQuestions > 5)
+                throw Exception
+            else return numberOfQuestions
+        } catch (Exception) {
+            userPrompt();
+        }
+    }
+
+    /**
+     * This function displays JavaScript questions up to the number requested with a max of 5 and min of 1
+     * @param {Array} arr An array of JSON .
+     * @param {Int} numQuestions The number of questions.
+     */
+    function displayQuestions(arr, numQuestions) 
     {
         let array = arr;
         let questionCounter = 0;
         for (question of array)
         {
+            if(questionCounter == numQuestions) return;
             let questionOutput = '';
             var answers = '';
             ++questionCounter;
@@ -74,7 +103,6 @@
             for (let i = 0; i < question.answers.length; i++)
             {
                 let ans = question.answers[i]
-                console.log(ans)
 
                 answers += `<input type="radio" name="question${questionCounter}"id="q${questionCounter}a${i}" value="${ans}">
                 <label for="q${questionCounter}a${i}" value="${ans}"><span>${ans}</span></label><br>`;
