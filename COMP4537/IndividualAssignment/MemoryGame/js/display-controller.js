@@ -7,7 +7,7 @@
 
 var blockArr    = [];
 var answerTiles = [];
-var rotated = false;
+var rotated     = false;
 var degree;
 
 /**
@@ -25,7 +25,7 @@ function getBlocks()
  * @param {javascript object} self The javascript object to be checked.
  */
 function checkColor(self) {
-    if(self.style.backgroundColor == 'blue') return true;
+    if(self.style.backgroundColor == BLUE) return true;
     else false;
 }
 
@@ -36,7 +36,7 @@ function checkColor(self) {
  */
 function colorBlue(self)
 {
-    self.style.backgroundColor = 'blue';
+    self.style.backgroundColor = BLUE;
 }
 
 /**
@@ -46,7 +46,7 @@ function colorBlue(self)
  */
 function colorRed(self)
 {
-    self.style.backgroundColor = 'red';
+    self.style.backgroundColor = RED;
 }
 
 /**
@@ -56,7 +56,7 @@ function colorWhite() {
     // console.log('FLASHING YOU AGAIN')
     // console.log('WHITE BOY')
     // console.log(answerTiles)
-    answerTiles.forEach( el => { el.style.backgroundColor = 'white'; })
+    answerTiles.forEach( el => { el.style.backgroundColor = WHITE; })
 }
 
 /**
@@ -66,7 +66,6 @@ function colorWhite() {
  */
 function targetTiles(numTiles) 
 {   
-    console.log('Grabbing tiles')
     let selectedRandomTiles = getRandomBlocks(numTiles, blockArr);
     selectedRandomTiles.forEach( el => { colorBlue(el) } )
     answerTiles = selectedRandomTiles;
@@ -100,7 +99,6 @@ function deleteGrid()
 {
     let grid   = document.getElementById('grid');
     grid.parentNode.removeChild(grid);
-    console.log('Deleted the grid');
 }
 
 /**
@@ -111,7 +109,6 @@ function deleteLoseDiv()
 {
     let loseDiv = document.getElementById('lose-div');
     loseDiv.parentNode.removeChild(loseDiv);
-    console.log('Deleted the loss Div');
 }
 
 /**
@@ -232,7 +229,7 @@ function animationFlip() {
             block.style .oTransform      = 'rotateY('+angle+'deg)'; 
             block.style.transform       = 'rotateY('+angle+'deg)'; 
         }
-        block.style.backgroundColor = 'blue';
+        block.style.backgroundColor = BLUE;
         angle = 0;
     }
 

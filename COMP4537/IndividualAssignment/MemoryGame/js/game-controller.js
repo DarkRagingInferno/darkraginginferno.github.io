@@ -41,7 +41,6 @@ function newGame()
     createGame(rowCount, colCount);
     getBlocks();
     flashCorrectTiles(tileCount);    
-    console.log('Created new game');
 }
 
 /**
@@ -56,8 +55,6 @@ function restartGame() {
     createTerminateBTN();
     getBlocks();
     flashCorrectTiles(tileCount);   
-    
-    console.log('Restarted Game');
 }
 
 /**
@@ -69,8 +66,6 @@ function terminate()
     createLoseScreen();
     clearTimeout(timer);
     clearTimeout(whiteFlash);
-
-    console.log('Terminated the game');
 }
 
 /**
@@ -83,16 +78,19 @@ function flashCorrectTiles(tiles)
     // console.log('I AM FLASHING YOU!');
     twoSecCountDown(tiles)
     
-    whiteFlash = setTimeout(() => {colorWhite(); 
+    whiteFlash = setTimeout(() => {
+                                    colorWhite(); 
                                     setTimeout(() => {animationRotate();} , 1000);
                                     canClick = false; 
                                     if (colCount == 6 && kingOfGames != 0) setTimeout(() => {secondRotate();} , 2000); 
-                                    else kingOfGames = 0;}, 3500);
-    setTimeout(() => {clearTimeout;
-                         clearTimeout; 
-                         correctTiles = getAnswerTiles(); 
-                         canClick = true; 
-                         console.log('OKAY now you can click')}, 5000, whiteFlash, rotate);
+                                    else kingOfGames = 0;
+                                }, 3500);
+    setTimeout(() => {
+                        clearTimeout;
+                        clearTimeout; 
+                        correctTiles = getAnswerTiles(); 
+                        canClick = true; 
+                    }, 5000, whiteFlash, rotate);
 }
 
 /**
@@ -123,14 +121,14 @@ function colorTile(self)
             colorBlue(self);
             score++;
             clickCounter++;
-            output = 'correct';
+            output = WIN;
         }
         else 
         {
             colorRed(self);
             score--;
             clickCounter++;
-            output = 'wrong';
+            output = LOSS;
         }
         setScore(score);
         
@@ -160,7 +158,7 @@ function evaluateGame()
     let perfectRun = true;
 
     tiles.forEach(el => {
-        if(el.style.backgroundColor != 'blue') perfectRun = false;
+        if(el.style.backgroundColor != BLUE) perfectRun = false;
     });
 
     if (!perfectRun) animationFlip();
@@ -170,7 +168,7 @@ function evaluateGame()
         console.log(rowCount, colCount)
         if (colCount === 6)
         {
-            getOutput('correct');
+            getOutput(WIN);
             kingOfGames++;
             clickCounter = 0;
             tileCount = 10;
@@ -179,7 +177,7 @@ function evaluateGame()
         }
         else 
         {
-            getOutput('correct');
+            getOutput(WIN);
             increaseGrid(rowCount, colCount);
             let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
             setTimeout(clearTimeout, 1600, startNewGame);
@@ -189,14 +187,14 @@ function evaluateGame()
     {
         if(rowCount === 1) 
         {
-            getOutput('wrong');
+            getOutput(LOSS);
             resetGame()
             let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
             setTimeout(clearTimeout, 1600, startNewGame); 
         }
         else 
         {
-            getOutput('wrong');
+            getOutput(LOSS);
             decreaseGrid(rowCount, colCount);
             let startNewGame = setTimeout(newGame, 1500, rowCount, colCount);
             setTimeout(clearTimeout, 1600, startNewGame);

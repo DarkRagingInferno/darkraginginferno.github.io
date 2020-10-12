@@ -8,8 +8,8 @@
 
 var windoWidth = window.innerWidth;
 var windowHeight = window.innerHeight;
-var width = 0;
-var height = 0;
+var height          = 0;
+var width           = 0;
 var mobileDimension = 45;
 
 /**
@@ -59,10 +59,7 @@ function createRows(numRows)
     let grid = document.getElementById('grid');
     let div  = document.createElement('div');
     div.setAttribute('class', 'row');
-    // div.innerHTML = 'Row was created';
     grid.appendChild(div);
-
-    // console.log(`Created ${numRows} rows`);
     
     return createRows(numRows - 1);
 }
@@ -83,9 +80,7 @@ function createColumn(numCol)
         div.setAttribute('class', 'col block');
         div.setAttribute('onclick', 'colorTile(this)');
         div.style.cssText = `width: ${width}px; height: ${height}px`
-        // div.innerHTML = 'This is a col';
         row.appendChild(div)
-        // console.log('Created row');
     }
     return createColumn(numCol - 1);
 }
@@ -97,16 +92,11 @@ function createColumn(numCol)
 */
 function setBlockDimensions(windowWidth, windowHeight) 
 {
-    console.log('hello')
-    let adjustedWidth = mobileDimension / windowWidth;
+    let adjustedWidth  = mobileDimension / windowWidth;
     let adjustedHeight = mobileDimension / windowHeight;
 
-    width = Math.floor(windowWidth * adjustedWidth);
+    width  = Math.floor(windowWidth * adjustedWidth);
     height = Math.floor(windowHeight * adjustedHeight);
-    
-    console.log('this is adjusted: ', adjustedWidth, adjustedHeight);
-    console.log('this is dimensions: ',width, height);
-    console.log('this is widnow: ', windoWidth, windowHeight);
 }
 
 

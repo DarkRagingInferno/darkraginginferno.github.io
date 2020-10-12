@@ -1,5 +1,8 @@
-const WIN   = 'correct'
-const LOSS  = 'wrong'
+const WIN   = 'correct';
+const LOSS  = 'wrong';
+const BLUE  = "blue";
+const RED   = "red";
+const WHITE = "white";
 
 
 const winOutputs = [
