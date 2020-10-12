@@ -3,6 +3,7 @@ var Request = require('tedious').Request;
 var TYPES = require('tedious').TYPES;
 var async = require('async');
 
+
 // Create connection to database
 const config = {
   authentication: {
@@ -21,19 +22,11 @@ const config = {
 
 const connection = new Connection(config);
 
-// Attempt to connect and execute queries if connection goes through
-// connection.on("connect", err => {
-//   if (err) {
-//     console.error(err.message);
-//   } else {
-//     queryDatabase();
-//   }
-// });
 
-function start(callback) 
+function start(callback)
 {
-  console.log('Starting....');
-  callback(null, 'Kida', 101);
+  console.log("Starting......");
+  callback(null, 'Kida', 46)
 }
 
 function read() {
@@ -55,6 +48,8 @@ function read() {
     columns.forEach(column => {
       console.log("%s\t%s", column.metadata.colName, column.value);
     });
+
+    return columns
   });
 
   connection.execSql(request);
@@ -72,7 +67,7 @@ function insert(name, score, callback)
       else
       {
         console.log(rowCount + ' row(s) inserted');
-        callback(null, 'Kida', 101);
+        callback(null, name, score);
       }
     });
     request.addParameter('Name', TYPES.NVarChar, name);
@@ -92,11 +87,17 @@ connection.on('connect', function(err) {
   } else {
     console.log('Connected');
 
-    // Execute all functions in the array serially
-    async.waterfall([
-        start,
-        insert,
-        read
-    ], complete)
+    // // Execute all functions in the array serially
+    // async.waterfall([
+    //     start,
+    //     insert,
+    //     read
+    // ], complete)
   }
 });
+
+module.exports = {
+  "read": read,
+  "insert": insert,
+  "complete": complete
+}
