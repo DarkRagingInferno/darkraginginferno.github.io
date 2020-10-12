@@ -1,16 +1,14 @@
-const express = require('express');
-const app = express();
-const port = 3000;
-const parser = require('body-parser');
+const express  = require('express');
+const app      = express();
+const port     = 3000;
 
 const connect = require('./connect');
 
-
 app.get('/get-highscore', (req, res) =>{
-    // res.send(connect.read());
-    connect.read()
-    connect.insert("kelsey", 122, console.log(122))
-    res.send('hello world!')
+    // connect.insert("Jared", 150, console.log("Inserted 150"))
+    console.log(connect.read())
+
+    console.log("Sookida")
 })
 
 app.listen(port, () => {
