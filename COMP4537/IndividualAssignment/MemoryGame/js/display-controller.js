@@ -133,6 +133,13 @@ function createLoseScreen()
     restartBTN.setAttribute('value', 'Restart?');
     restartBTN.setAttribute('onclick', 'restartGame()');
 
+    let textField = document.createElement('input');
+    textField.setAttribute('type', 'text');
+    textField.setAttribute('placeholder', 'Enter Name');
+
+    let submitBTN = createSubmitBTN()
+
+    lostDiv.appendChild(submitBTN)
     lostDiv.appendChild(para)
     lostDiv.appendChild(restartBTN);
     gridContainer.appendChild(lostDiv);
@@ -145,12 +152,22 @@ function createTerminateBTN()
 {
     let gridContainer = document.getElementById('container');
     let terminateBTN  = document.createElement('input');
-    // button.style.cssText = "id: terminate; type: submit; value: Terminate; onclick: terminate()";
     terminateBTN.setAttribute('id', 'terminate');
     terminateBTN.setAttribute('type', 'submit');
     terminateBTN.setAttribute('value', 'Terminate');
     terminateBTN.setAttribute('onclick', 'terminate()');
     gridContainer.appendChild(terminateBTN);
+}
+
+function createSubmitBTN()
+{
+    let submitBTN  = document.createElement('input');
+    submitBTN.setAttribute('id', 'submit');
+    submitBTN.setAttribute('type', 'submit');
+    submitBTN.setAttribute('value', 'Submit Game');
+    submitBTN.setAttribute('onclick', 'submitGame()');
+
+    return submitBTN
 }
 
 /**

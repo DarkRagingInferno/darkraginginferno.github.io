@@ -57,6 +57,11 @@ function restartGame() {
     flashCorrectTiles(tileCount);   
 }
 
+function submitGame()
+{
+    let userScore = score;
+}
+
 /**
  * This function terminates the current game
  */
