@@ -5,6 +5,7 @@ const port     = 3000;
 const parser   = require('body-parser')
 
 app.use(parser.json());
+app.use(restify.CORS());
 
 app.post("/get-scores", function(req, res) 
 {
