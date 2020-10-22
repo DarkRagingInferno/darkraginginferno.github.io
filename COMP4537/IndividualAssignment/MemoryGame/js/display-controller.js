@@ -145,7 +145,6 @@ function createLoseScreen()
 
 function createLeaderboardScreen()
 {
-    window.location.href = BASE_URL + LEADERBOARD;
     let container = document.getElementById('container');
 
     let restartBTN = createRestartBTN(); 
