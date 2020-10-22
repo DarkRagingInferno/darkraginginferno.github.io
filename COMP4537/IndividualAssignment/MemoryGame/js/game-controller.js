@@ -65,11 +65,11 @@ function submitGame()
     if(userName == '') { userName = "John Doe" }
 
     let userScore = score;
-    let response = fetchRequest(userName, userScore).then(createLeaderboardScreen());
+    let response = fetchRequest(userName, userScore)
 
-    console.log("This is the response: ", response);
+    console.log(response);
 
-    
+    createLeaderboardScreen();
 }
 
 function fetchRequest(name, userScore) 
@@ -77,7 +77,7 @@ function fetchRequest(name, userScore)
     console.log("Inside fetchRequest: ");
     console.log(name, userScore);
     console.log("----------------------------")
-    fetch(BASE_URL + SCORE, 
+    let answer = fetch(BASE_URL + SCORE, 
         {
             method: 'POST',
             headers: 
@@ -99,6 +99,8 @@ function fetchRequest(name, userScore)
         {
             console.error('Error:', error)
         });
+
+    return answer;
 }
 
 /**
