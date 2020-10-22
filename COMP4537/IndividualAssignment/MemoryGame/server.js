@@ -5,10 +5,10 @@ const port     = 3000 || process.env.port;
 const parser   = require('body-parser')
 
 app.use(parser.json());
-app.use(restify.CORS());
+// app.use(restify.CORS());
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
-    res.setHeader('Access-Control-Allow-Origin', BASE_URL+SCORE);
+    res.setHeader('Access-Control-Allow-Origin', "*");
 })
 
 app.post("/get-scores", function(req, res) 
