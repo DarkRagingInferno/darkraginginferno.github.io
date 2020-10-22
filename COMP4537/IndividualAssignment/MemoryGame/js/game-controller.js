@@ -75,7 +75,7 @@ function submitGame()
 function fetchRequest(name, userScore) 
 {
     console.log("Inside fetchRequest: ");
-    console.log(typeof(name), typeof(userScore), typeof(parseInt(userScore)));
+    console.log(typeof name, typeof userScore, typeof parseInt(userScore));
     console.log("----------------------------")
     let answer = fetch(BASE_URL + SCORE, 
         {
