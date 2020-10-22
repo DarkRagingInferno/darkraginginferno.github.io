@@ -60,13 +60,9 @@ function restartGame() {
 function submitGame()
 {
     let node     = document.getElementById('textfield')
-    console.log(node.value)
     let userName = node.value
-    console.log("This is the username: ", userName);
     userName.trim();
     if(userName == '') { userName = "John Doe" }
-
-    console.log(userName)
 
     let userScore = score;
     let response = fetchRequest(userName, userScore);
@@ -78,7 +74,9 @@ function submitGame()
 
 function fetchRequest(name, userScore) 
 {
-    console.log("Inside fetchRequest: ", name, userScore);
+    console.log("Inside fetchRequest: ");
+    console.log(name, userScore);
+    console.log("----------------------------")
     fetch(BASE_URL + SCORE, 
         {
             method: 'POST',
