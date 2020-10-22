@@ -71,31 +71,36 @@ function submitGame()
     let userScore = score;
     let response = fetchRequest(userName, userScore);
 
-    console.log(response);
+    console.log("This is the response: ", response);
 
     createLeaderboardScreen()
 }
 
 function fetchRequest(name, userScore) 
 {
-    console.log(name, userScore);
-    fetch(BASE_URL + SCORE, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-            "username": name,
-            "score": userScore
+    console.log("Inside fetchRequest: ", name, userScore);
+    fetch(BASE_URL + SCORE, 
+        {
+            method: 'POST',
+            headers: 
+            {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data =
+            {
+                "username": name,
+                "score": userScore
+            })
         })
         .then(response => response.json())
-        .then(data => {
+        .then(data => 
+        {
             console.log('Success:', data)
         })
-        .catch((error) => {
+        .catch((error) => 
+        {
             console.error('Error:', error)
-        })
-    });
+        });
 }
 
 /**
