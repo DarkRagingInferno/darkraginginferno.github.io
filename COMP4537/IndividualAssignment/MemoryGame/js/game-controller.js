@@ -77,7 +77,7 @@ function fetchRequest(name, userScore)
     console.log("Inside fetchRequest: ");
     console.log(typeof name)
     console.log(typeof userScore)
-    console.log(typeof parseInt(userScore));
+    console.log(typeof userScore.toString());
     console.log("----------------------------")
     let answer = fetch(BASE_URL + SCORE, 
         {
@@ -90,7 +90,7 @@ function fetchRequest(name, userScore)
             body: JSON.stringify(
             {
                 "username": name,
-                "score": parseInt(userScore)
+                "score": userScore.toString()
             })
         })
         .then(response => response.json())
