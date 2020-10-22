@@ -78,7 +78,7 @@ function submitGame()
 
 function fetchRequest(name, userScore) 
 {
-    fetch('https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/get-score'), {
+    fetch(BASE_URL + SCORE), {
         method: 'POST',
         headers: {
             'Accept': 'application.json',
