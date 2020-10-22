@@ -84,7 +84,7 @@ function fetchRequest(name, userScore)
             {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(data =
+            body: JSON.stringify(
             {
                 "username": name,
                 "score": userScore
