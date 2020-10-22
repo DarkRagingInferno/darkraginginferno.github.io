@@ -8,7 +8,7 @@
 
  
 var timer        = null;
-var whitFlash    = null;
+var whiteFlash    = null;
 var rotate       = null;
 var canClick     = false;
 var maxClicks    = 2; //2
@@ -59,7 +59,37 @@ function restartGame() {
 
 function submitGame()
 {
+    let node     = document.getElementById('textfield')
+    console.log(node.value)
+    let userName = node.value
+    console.log("This is the username: ", userName);
+    userName.trim();
+    if(userName == '') { userName = "John Doe" }
+
+    console.log(userName)
+
     let userScore = score;
+    let response = fetchRequest(userName, userScore);
+
+    console.log(response);
+
+    createLeaderboardScreen()
+}
+
+function fetchRequest(name, userScore) 
+{
+    // fetch('https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/get-score'), {
+    fetch('/get-score'), {
+        method: 'POST',
+        headers: {
+            'Accept': 'application.json',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "username": name,
+            "score": userScore
+        })
+    }
 }
 
 /**
@@ -272,13 +302,10 @@ function checkCorrect(self)
  */
 function resetGame()
 {
-    rowCount = 1;
-    colCount = 1;
-    tileCount = 2; 
+    rowCount     = 1;
+    colCount     = 1;
+    tileCount    = 2; 
     clickCounter = 0;
-    maxClicks = 2; 
-    canClick = false;
+    maxClicks    = 2; 
+    canClick     = false;
 }
-
-
-

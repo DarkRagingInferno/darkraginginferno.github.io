@@ -127,22 +127,43 @@ function createLoseScreen()
     para.setAttribute('class', 'losing-para');
     para.innerHTML = "You're better than that!";
 
+    let restartBTN = createRestartBTN() 
+
+    let textField  = document.createElement('input');
+    textField.setAttribute('type', 'text');
+    textField.setAttribute('placeholder', 'Enter Name');
+    textField.setAttribute('id', 'textfield');
+
+    let submitBTN  = createSubmitBTN()
+
+    lostDiv.append(textField);
+    lostDiv.appendChild(submitBTN);
+    lostDiv.appendChild(para);
+    lostDiv.appendChild(restartBTN);
+    gridContainer.appendChild(lostDiv);
+}
+
+function createLeaderboardScreen()
+{
+    let container = document.getElementById('container');
+
+    let restartBTN = createRestartBTN(); 
+
+    container.appendChild(restartBTN);
+}
+
+/**
+ * This function creates a terminate button.
+ */
+function createRestartBTN() 
+{
     let restartBTN = document.createElement('input');
     restartBTN.setAttribute('id', 'restart');
     restartBTN.setAttribute('type', 'submit');
     restartBTN.setAttribute('value', 'Restart?');
     restartBTN.setAttribute('onclick', 'restartGame()');
-
-    let textField = document.createElement('input');
-    textField.setAttribute('type', 'text');
-    textField.setAttribute('placeholder', 'Enter Name');
-
-    let submitBTN = createSubmitBTN()
-
-    lostDiv.appendChild(submitBTN)
-    lostDiv.appendChild(para)
-    lostDiv.appendChild(restartBTN);
-    gridContainer.appendChild(lostDiv);
+    
+    return restartBTN
 }
 
 /**
@@ -166,6 +187,7 @@ function createSubmitBTN()
     submitBTN.setAttribute('type', 'submit');
     submitBTN.setAttribute('value', 'Submit Game');
     submitBTN.setAttribute('onclick', 'submitGame()');
+    submitBTN.setAttribute('href', '../html/leaderboard.html')
 
     return submitBTN
 }
@@ -196,7 +218,7 @@ function getOutput(result)
 {
     let output = document.getElementById('output');
     if (result == WIN )
-        output.innerHTML = gameOutput(WIN)
+        output.innerHTML  = gameOutput(WIN)
     else output.innerHTML = gameOutput(LOSS)
 }
 
@@ -243,7 +265,7 @@ function animationFlip() {
             block.style.webkitTransform = 'rotateY('+angle+'deg)'; 
             block.style.mozTransform    = 'rotateY('+angle+'deg)'; 
             block.style.msTransform     = 'rotateY('+angle+'deg)'; 
-            block.style .oTransform      = 'rotateY('+angle+'deg)'; 
+            block.style .oTransform     = 'rotateY('+angle+'deg)'; 
             block.style.transform       = 'rotateY('+angle+'deg)'; 
         }
         block.style.backgroundColor = BLUE;

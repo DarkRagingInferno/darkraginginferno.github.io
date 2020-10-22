@@ -1,30 +1,37 @@
-const express = require("express");
-const bodyParser = require("body-parser");
-// const router = express.Router();
-const app = express();
+const express  = require("express");
+const sql      = require("mssql");
+const app      = express();
 const port     = 3000;
+const parser   = require('body-parser')
 
-const connect = require('./connect');
+app.use(parser.json());
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.post("/get-scores", function(req, res) 
+{
+    console.log(req.body); 
+    var config = 
+    {
+        user: 'sookida',
+        password: 'psek8whok@tict2KUCH',
+        server: 'memorydbjvb.database.windows.net', 
+        database: 'memorydb' 
+    };
+    sql.connect(config, function (err) 
+    {
+        if (err) console.log(err);
 
-app.get('/', (req, res) =>{
-    console.log("Making the GET request...")
-    // connect.insert("SooKida", 150, console.log)
-    let response = connect.read()
-    console.log("This is the response: ", response)
-    res.send(response)
+        var request = new sql.Request();
+        let insertQry = "insert into Score (name, score) values('" + req.body.username + "'," + parseInt(req.body.score) + ');'
+        request.query(insertQry, function (err) 
+        {
+            if (err) console.log(err)
+            request.query('select top 5 name, score from Score order by score desc', function (err, scores) 
+            {
+                if (err) console.log(err)
+                res.send(scores);
+            });
+        });
+    });
 })
 
-app.post('/record-score', (req, res) => {
-    var name = req.body.name;
-    var score = req.body.score;
-    // DO SOMETHING BELOW HERE
-    res.send(connect.insert(name, score, console.log))
-})
-
-app.listen(port, () => {
-  
-    console.log(`Listening on http://localhost:${port}`);
-})
+app.listen(port, () => {console.log(`Listening on http://localhost:${port}`); })
