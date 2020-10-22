@@ -65,11 +65,11 @@ function submitGame()
     if(userName == '') { userName = "John Doe" }
 
     let userScore = score;
-    let response = fetchRequest(userName, userScore);
+    let response = fetchRequest(userName, userScore).then(createLeaderboardScreen());
 
     console.log("This is the response: ", response);
 
-    createLeaderboardScreen()
+    
 }
 
 function fetchRequest(name, userScore) 
