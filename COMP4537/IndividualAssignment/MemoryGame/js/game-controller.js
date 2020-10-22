@@ -78,17 +78,24 @@ function submitGame()
 
 function fetchRequest(name, userScore) 
 {
-    fetch(BASE_URL + SCORE), {
+    console.log(name, userScore);
+    fetch(BASE_URL + SCORE, {
         method: 'POST',
         headers: {
-            'Accept': 'application.json',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
             "username": name,
             "score": userScore
         })
-    }
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data)
+        })
+        .catch((error) => {
+            console.error('Error:', error)
+        })
+    });
 }
 
 /**
