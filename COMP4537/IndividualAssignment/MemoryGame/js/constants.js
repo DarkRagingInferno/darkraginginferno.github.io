@@ -5,7 +5,7 @@ const RED         = "red";
 const WHITE       = "white";
 const BASE_URL    = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/";
 const SCORE       = "get-score";
-const LEADERBOARD = "MemoryGame/leaderboard.html";
+const LEADERBOARD = "leaderboard.html";
 
 
 const winOutputs = [
