@@ -85,7 +85,8 @@ function fetchRequest(name, userScore)
             headers: 
             {
                 "Accept": "application/json",
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "Access-Control-Allow-Headers": "Authorization, Content-Type"
             },
             body: JSON.stringify(
             {
