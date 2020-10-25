@@ -184,10 +184,10 @@ function createSubmitBTN()
 {
     let submitBTN  = document.createElement('input');
     submitBTN.setAttribute('id', 'submit');
-    submitBTN.setAttribute('type', 'submit');
+    submitBTN.setAttribute('type', 'button');
     submitBTN.setAttribute('value', 'Submit Game');
     submitBTN.setAttribute('onclick', 'submitGame()');
-    submitBTN.setAttribute('href', '../html/leaderboard.html')
+    // submitBTN.setAttribute('href', '../html/leaderboard.html')
 
     return submitBTN
 }

@@ -68,18 +68,15 @@ function submitGame()
     let response = fetchRequest(userName, userScore)
 
     console.log(response);
-
+    location.href = "../leaderboard.html";
     createLeaderboardScreen();
 }
 
 function fetchRequest(name, userScore) 
 {
     console.log("Inside fetchRequest: ");
-    console.log(typeof name)
-    console.log(typeof userScore)
-    console.log(typeof userScore.toString());
-    console.log("----------------------------")
-    let answer = fetch(BASE_URL + SCORE, 
+
+    let answer = fetch("https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/get-score", 
         {
             method: 'POST',
             headers: 
