@@ -1,11 +1,10 @@
 const express  = require("express");
 const sql      = require("mssql");
 const app      = express();
-const port     = 3000 || process.env.port;
+const port     = process.env.port || 3000;
 const parser   = require('body-parser')
 
 app.use(parser.json());
-// app.use(restify.CORS());
 app.use(function (req, res, next) {
     res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
     res.setHeader('Access-Control-Allow-Origin', "*");
