@@ -37,7 +37,7 @@ window.onload = () => {
         setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
         loaded = true;
     }
-    else return 
+    else { return console.log(loaded); }
 }
 
 /**
