@@ -27,7 +27,11 @@ loaded = false
  */
 window.onload = () => {
     
-    if (!loaded)
+    if (loaded)
+    {
+        return console.log(loaded); 
+    }
+    else 
     {
         console.log(window.href);
         console.log('hello there');
@@ -35,9 +39,8 @@ window.onload = () => {
         getBlocks();
         flashCorrectTiles(tileCount);
         setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
-        loaded = true;
+        loaded = true; 
     }
-    else { return console.log(loaded); }
 }
 
 /**
