@@ -68,7 +68,7 @@ function submitGame()
     let response = fetchRequest(userName, userScore)
 
     console.log(response);
-    location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
+    window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
     createLeaderboardScreen();
 }
 
