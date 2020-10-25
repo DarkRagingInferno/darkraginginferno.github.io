@@ -25,7 +25,8 @@ var kingOfGames  = 0;
  * and begins a memory game.
  */
 window.onload = () => {
-    console.log(window.href)
+    console.log(window.href);
+    console.log('hello there');
     createGame(rowCount, colCount);
     getBlocks();
     flashCorrectTiles(tileCount);
