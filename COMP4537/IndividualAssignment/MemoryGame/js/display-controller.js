@@ -53,10 +53,7 @@ function colorRed(self)
  * This function takes all selected correct tiles and turns them white.
  */
 function colorWhite() {
-    // console.log('FLASHING YOU AGAIN')
-    // console.log('WHITE BOY')
-    // console.log(answerTiles)
-    answerTiles.forEach( el => { el.style.backgroundColor = WHITE; })
+    answerTiles.forEach( el => { el.style.backgroundColor = TRANSPARENT; })
 }
 
 /**
