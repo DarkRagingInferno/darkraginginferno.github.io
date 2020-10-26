@@ -134,7 +134,7 @@ input {
     color: red;
 }
 
-#restart {
+#restart, #submit {
     min-height: 250px;
     height: 250px;
     width: 300px;
