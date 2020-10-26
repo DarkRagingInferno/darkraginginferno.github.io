@@ -157,7 +157,10 @@ function createLeaderboardScreen(response)
     let restartBTN = createRestartBTN();
     
     response.forEach(res => {
-        console.log("hello")
+        let div = document.createElement('div');
+        div.appendChild(res);
+        div.setAttribute("background-Color", "yellow");
+        container.appendChild(div);
     })
 
     container.appendChild(restartBTN);
