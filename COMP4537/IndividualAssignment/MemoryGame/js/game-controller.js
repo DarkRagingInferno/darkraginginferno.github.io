@@ -26,9 +26,9 @@ var leaderboard  = false;
  * and begins a memory game.
  */
 window.onload = () => {
-    if (window.location.href = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
+    if (window.location.href == 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
     {
-        console.log("do nothing in this case"); 
+        return;
     }
     else 
     {
