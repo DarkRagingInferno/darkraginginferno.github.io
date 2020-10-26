@@ -145,7 +145,7 @@ function createLoseScreen()
 
 function createLeaderboardScreen()
 {
-    let container = document.getElementById('container');
+    let container = document.getElementById('leadboard-container');
 
     let restartBTN = createRestartBTN(); 
 
