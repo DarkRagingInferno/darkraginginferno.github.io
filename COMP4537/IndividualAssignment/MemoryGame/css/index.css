@@ -97,6 +97,9 @@ body {
     font-size: 24px;
     text-align: center;
     
+    width: 100px;
+    height: 120px;
+    z-index: 5;
     background-color: grey;
     filter: opacity(50%);
 }
