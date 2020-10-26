@@ -96,12 +96,13 @@ body {
     margin-top: 5%;
     font-size: 24px;
     text-align: center;
+    border-radius: 5px;
     
     width: 100px;
     height: 120px;
     z-index: 5;
-    background-color: grey;
-    filter: opacity(50%);
+    background-color: white;
+    filter: opacity(70%);
 }
 
 #output {
