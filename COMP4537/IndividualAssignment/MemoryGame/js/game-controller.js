@@ -20,29 +20,29 @@ var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
 var leaderboard  = false;
-// var loaded       = false
+var loaded       = false
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets
  * and begins a memory game.
  */
-// window.onload = () => {
+window.onload = () => {
     
-//     // if (loaded)
-//     // {
-//     //     return console.log(loaded); 
-//     // }
-//     // else 
-//     // {
-//     console.log(window.href);
-//     console.log('hello there');
-//     createGame(rowCount, colCount);
-//     getBlocks();
-//     flashCorrectTiles(tileCount);
-//     setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
-//         // loaded = true; 
-//     // }
-// }
+    if (loaded)
+    {
+        return; 
+    }
+    else 
+    {
+        console.log(window.href);
+        console.log('hello there');
+        createGame(rowCount, colCount);
+        getBlocks();
+        flashCorrectTiles(tileCount);
+        setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
+        loaded = true; 
+    }
+}
 
 /**
  * This function creates a new game.
