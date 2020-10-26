@@ -157,7 +157,7 @@ function createLeaderboardScreen(response)
     let restartBTN = createRestartBTN();
     
     response.forEach(res => {
-        res.
+        console.log("hello")
     })
 
     container.appendChild(restartBTN);
