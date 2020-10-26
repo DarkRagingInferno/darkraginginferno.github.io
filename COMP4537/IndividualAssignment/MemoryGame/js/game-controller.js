@@ -87,7 +87,7 @@ function submitGame()
 
     console.log(response);
     
-    window.location.href = BASE_URL+"html/leaderboard.html";
+    window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
 
     console.log("Rendering leaderboard screen");
     createLeaderboardScreen();
