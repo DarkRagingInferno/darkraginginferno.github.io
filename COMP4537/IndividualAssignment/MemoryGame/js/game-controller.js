@@ -46,7 +46,8 @@ window.onload = () => {
 
 /**
  * This function creates a new game.
- */r
+ */
+function newGame() 
 {
     removeOutput(); 
     deleteGrid();
@@ -124,8 +125,13 @@ function terminate()
 { 
     deleteGrid();
     createLoseScreen();
+    clearTimers()
+}
+
+function clearTimers(){
     clearTimeout(timer);
     clearTimeout(whiteFlash);
+    clearTimeout(rotate);
 }
 
 /**

@@ -54,8 +54,7 @@ function createGrid()
 */
 function createRows(numRows) 
 {
-    if(numRows == -1) return console.log(`I came back ${numRows}`); 
-    
+    if(numRows == -1) return; 
     let grid = document.getElementById('grid');
     let div  = document.createElement('div');
     div.setAttribute('class', 'row');

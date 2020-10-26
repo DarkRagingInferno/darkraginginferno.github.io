@@ -110,7 +110,7 @@ function deleteLoseDiv()
     let loseDiv = document.getElementById('lose-div');
     if (loseDiv.childElementCount != null)
         loseDiv.parentNode.removeChild(loseDiv);
-    else return;
+    else return
 }
 
 function deleteLeaderboardDiv()
@@ -118,7 +118,7 @@ function deleteLeaderboardDiv()
     let leaderDiv = document.getElementById('leaderboard-container');
     if(leaderDiv.childElementCount != null)
         leaderDiv.parentNode.removeChild(leaderDiv);
-    else return;
+    else return
 }
 
 /**
@@ -281,6 +281,7 @@ function animationFlip() {
         block.style.backgroundColor = BLUE;
         angle = 0;
     }
+
 }
 
 /**
@@ -299,3 +300,6 @@ function secondRotate() {
     grid.style.oTransform      = 'rotate('+newAngle+'deg)'; 
     grid.style.transform       = 'rotate('+newAngle+'deg)'; 
 }
+
+
+    

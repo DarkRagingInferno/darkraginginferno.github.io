@@ -134,18 +134,9 @@ input {
     color: red;
 }
 
-#submitGG {
-    min-height: 50px;
-    height: 50px;
-    width: 150px;
-    font-size: 30px;
-    border-radius: 20px;
-    text-align: center;
-}
-
 #restart {
     min-height: 250px;
-    height: 100px;
+    height: 250px;
     width: 300px;
     font-size: 70px;
     border-radius: 20px;
