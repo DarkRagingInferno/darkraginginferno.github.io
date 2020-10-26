@@ -154,7 +154,7 @@ function createLeaderboardScreen(response)
 {
     console.log("The response should follow this");
     console.log(response)
-
+    
 
     let container = document.getElementById('leadboard-container');
     let restartBTN = createRestartBTN();
