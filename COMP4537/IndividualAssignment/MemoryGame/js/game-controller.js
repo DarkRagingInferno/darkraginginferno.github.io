@@ -28,7 +28,7 @@ var loaded       = false
  */
 window.onload = () => {
     
-    if (loaded)
+    if (loaded == true)
     {
         return; 
     }
