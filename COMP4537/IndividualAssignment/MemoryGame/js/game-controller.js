@@ -27,12 +27,12 @@ loaded = false
  */
 window.onload = () => {
     
-    if (loaded)
-    {
-        return console.log(loaded); 
-    }
-    else 
-    {
+    // if (loaded)
+    // {
+    //     return console.log(loaded); 
+    // }
+    // else 
+    // {
         console.log(window.href);
         console.log('hello there');
         createGame(rowCount, colCount);
@@ -40,7 +40,7 @@ window.onload = () => {
         flashCorrectTiles(tileCount);
         setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
         loaded = true; 
-    }
+    // }
 }
 
 /**
