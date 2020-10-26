@@ -108,7 +108,8 @@ function deleteGrid()
 function deleteLoseDiv() 
 {
     let loseDiv = document.getElementById('lose-div');
-    loseDiv.parentNode.removeChild(loseDiv);
+    if (loseDiv.childElementCount == null)
+        loseDiv.parentNode.removeChild(loseDiv);
 }
 
 /**
