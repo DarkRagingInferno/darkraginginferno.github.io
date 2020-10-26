@@ -108,10 +108,6 @@ function fetchRequest(name, userScore)
         {
             console.log('Success:', data)
         })
-        .then(res => 
-        {
-           console.log('Success', res)
-        })
         .catch((error) => 
         {
             console.error('Error:', error)
