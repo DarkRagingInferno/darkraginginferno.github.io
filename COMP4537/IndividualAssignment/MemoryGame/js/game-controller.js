@@ -124,10 +124,7 @@ function fetchRequest(name, userScore)
  * This function terminates the current game
  */
 function terminate()
-{ 
-    console.log(loaded)
-    
-    
+{     
     deleteGrid();
     createLoseScreen();
     clearTimers()
