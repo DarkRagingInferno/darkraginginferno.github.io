@@ -83,8 +83,8 @@ function submitGame()
     .then(answer => console.log(answer))
     .then(console.log("Rendering leaderboard screen"))
     .then(window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html")
-    .then(res => createLeaderboardScreen(res));
     
+    setTimeout(createLeaderboardScreen(response), 0);
 }
 
 function fetchRequest(name, userScore) 
