@@ -20,15 +20,13 @@ var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
 var leaderboard  = false;
-var loaded       = false
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets
  * and begins a memory game.
  */
 window.onload = () => {
-    console.log(window.location.href)
-    if (loaded == true)
+    if (winodows.location.href = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
     {
         return; 
     }
@@ -39,9 +37,6 @@ window.onload = () => {
         getBlocks();
         flashCorrectTiles(tileCount);
         setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
-        loaded = true; 
-        
-        console.log(loaded)
     }
 }
 
