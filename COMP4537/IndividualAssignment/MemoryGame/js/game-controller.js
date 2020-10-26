@@ -27,7 +27,7 @@ var loaded       = false
  * and begins a memory game.
  */
 window.onload = () => {
-    
+    console.log(loaded)
     if (loaded == true)
     {
         return; 
