@@ -134,7 +134,7 @@ input {
     color: red;
 }
 
-#submit {
+#submitGG {
     min-height: 150px;
     height: 100px;
     width: 150px;
@@ -145,7 +145,7 @@ input {
 
 #restart {
     min-height: 250px;
-    height: 250px;
+    height: 100px;
     width: 300px;
     font-size: 70px;
     border-radius: 20px;

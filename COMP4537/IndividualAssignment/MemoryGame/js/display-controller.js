@@ -184,9 +184,9 @@ function createTerminateBTN()
 function createSubmitBTN()
 {
     let submitBTN  = document.createElement('input');
-    submitBTN.setAttribute('id', 'submit');
+    submitBTN.setAttribute('id', 'submitGG');
     submitBTN.setAttribute('type', 'button');
-    submitBTN.setAttribute('value', 'Submit Game');
+    submitBTN.setAttribute('value', 'Submit');
     submitBTN.setAttribute('onclick', 'submitGame()');
     // submitBTN.setAttribute('href', '../html/leaderboard.html')
 
