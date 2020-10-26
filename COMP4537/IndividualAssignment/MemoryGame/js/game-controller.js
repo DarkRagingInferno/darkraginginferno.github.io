@@ -52,9 +52,10 @@ function newGame()
     removeOutput(); 
     deleteGrid();
     createGame(rowCount, colCount);
-    playSound().play();
+    let sound = etTimeout(playSound().play(),0);
     getBlocks();
-    flashCorrectTiles(tileCount);    
+    flashCorrectTiles(tileCount);
+    clearTimeout(sound)    
 }
 
 /**
