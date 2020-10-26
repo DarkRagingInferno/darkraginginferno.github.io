@@ -153,8 +153,8 @@ function createLoseScreen()
 function createLeaderboardScreen(response)
 {
     console.log("The response should follow this");
-    console.log(response)
-    
+    console.log(response.data)
+
 
     let container = document.getElementById('leadboard-container');
     let restartBTN = createRestartBTN();
@@ -168,7 +168,7 @@ function createLeaderboardScreen(response)
 
     container.appendChild(restartBTN);
 
-    console.log(response)
+    console.log(response.data)
 }
 
 /**
