@@ -87,7 +87,7 @@ function submitGame()
 
     console.log(response);
     
-    window.location.pathname = "leaderboard.html";
+    window.location.pathname = "MemoryGame/html/leaderboard.html";
 
     console.log("Rendering leaderboard screen");
     createLeaderboardScreen();
