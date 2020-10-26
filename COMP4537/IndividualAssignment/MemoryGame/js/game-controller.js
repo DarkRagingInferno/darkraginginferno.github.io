@@ -20,7 +20,7 @@ var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
 var leaderboard  = false;
-loaded = false
+var loaded = false
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets
@@ -73,14 +73,14 @@ function restartGame() {
 
 function submitGame()
 {
-    leaderboard = true;
+    leaderboard  = true;
     let node     = document.getElementById('textfield')
     let userName = node.value
     userName.trim();
     if(userName == '') { userName = "John Doe" }
 
     let userScore = score;
-    let response = fetchRequest(userName, userScore)
+    let response  = fetchRequest(userName, userScore)
 
     console.log(response);
     window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";

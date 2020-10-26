@@ -281,7 +281,6 @@ function animationFlip() {
         block.style.backgroundColor = BLUE;
         angle = 0;
     }
-
 }
 
 /**
@@ -300,6 +299,3 @@ function secondRotate() {
     grid.style.oTransform      = 'rotate('+newAngle+'deg)'; 
     grid.style.transform       = 'rotate('+newAngle+'deg)'; 
 }
-
-
-    
