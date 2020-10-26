@@ -108,8 +108,17 @@ function deleteGrid()
 function deleteLoseDiv() 
 {
     let loseDiv = document.getElementById('lose-div');
-    if (loseDiv.childElementCount == null)
+    if (loseDiv.childElementCount != null)
         loseDiv.parentNode.removeChild(loseDiv);
+    else return;
+}
+
+function deleteLeaderboardDiv()
+{
+    let leaderDiv = document.getElementById('leaderboard-container');
+    if(leaderDiv.childElementCount != null)
+        leaderDiv.parentNode.removeChild(leaderDiv);
+    else return;
 }
 
 /**

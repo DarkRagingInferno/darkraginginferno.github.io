@@ -19,6 +19,7 @@ var colCount     = 1; //1
 var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
+var leaderboard  = false;
 loaded = false
 
 /**
@@ -60,8 +61,9 @@ function newGame()
  */
 function restartGame() {
     score = 0;
+    if (!leaderboard) deleteLoseDiv();
+    else  deleteLeaderboardDiv()
     resetGame()
-    deleteLoseDiv();
     setScore(score);
     createGame(rowCount, colCount);
     createTerminateBTN();
@@ -71,6 +73,7 @@ function restartGame() {
 
 function submitGame()
 {
+    leaderboard = true;
     let node     = document.getElementById('textfield')
     let userName = node.value
     userName.trim();
@@ -331,4 +334,5 @@ function resetGame()
     clickCounter = 0;
     maxClicks    = 2; 
     canClick     = false;
+    leaderboard  = false;
 }
