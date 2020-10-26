@@ -152,17 +152,19 @@ function createLoseScreen()
 
 function createLeaderboardScreen(response)
 {
+    console.log("The response should follow this");
     console.log(response)
-    
+
+
     let container = document.getElementById('leadboard-container');
     let restartBTN = createRestartBTN();
     
-    response.forEach(res => {
-        let div = document.createElement('div');
-        div.appendChild(res);
-        div.setAttribute("background-Color", "yellow");
-        container.appendChild(div);
-    })
+    // response.forEach(res => {
+    //     let div = document.createElement('div');
+    //     div.appendChild(res);
+    //     div.setAttribute("background-Color", "yellow");
+    //     container.appendChild(div);
+    // })
 
     container.appendChild(restartBTN);
 
