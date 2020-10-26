@@ -134,7 +134,16 @@ input {
     color: red;
 }
 
-#restart, #submit {
+#submit {
+    min-height: 150px;
+    height: 100px;
+    width: 150px;
+    font-size: 30px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#restart {
     min-height: 250px;
     height: 250px;
     width: 300px;
