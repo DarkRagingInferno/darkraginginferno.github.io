@@ -28,7 +28,7 @@ var leaderboard  = false;
 window.onload = () => {
     if (window.location.href = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
     {
-        return; 
+        console.log("do nothing in this case"); 
     }
     else 
     {
