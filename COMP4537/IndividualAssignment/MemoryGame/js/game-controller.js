@@ -80,10 +80,14 @@ function submitGame()
     if(userName == '') { userName = "John Doe" }
 
     let userScore = score;
+    console.log("About to enter fetchRequest()");
     let response  = fetchRequest(userName, userScore)
 
     console.log(response);
+    
     window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
+    
+    console.log("Rendering leaderboard screen");
     createLeaderboardScreen();
 }
 
@@ -114,7 +118,8 @@ function fetchRequest(name, userScore)
         {
             console.error('Error:', error)
         });
-
+    console.log("Leaving fetchRequest");
+    console.log(answer);
     return answer;
 }
 
