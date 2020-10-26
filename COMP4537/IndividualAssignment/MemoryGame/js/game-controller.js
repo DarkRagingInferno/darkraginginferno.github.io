@@ -46,8 +46,7 @@ window.onload = () => {
 
 /**
  * This function creates a new game.
- */
-function newGame() 
+ */r
 {
     removeOutput(); 
     deleteGrid();
