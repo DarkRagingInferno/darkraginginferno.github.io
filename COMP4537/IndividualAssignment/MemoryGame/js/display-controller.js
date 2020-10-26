@@ -150,11 +150,15 @@ function createLoseScreen()
     gridContainer.appendChild(lostDiv);
 }
 
-function createLeaderboardScreen()
+function createLeaderboardScreen(response)
 {
+    console.log(response)
     let container = document.getElementById('leadboard-container');
-
-    let restartBTN = createRestartBTN(); 
+    let restartBTN = createRestartBTN();
+    
+    response.forEach(res => {
+        res.
+    })
 
     container.appendChild(restartBTN);
 }

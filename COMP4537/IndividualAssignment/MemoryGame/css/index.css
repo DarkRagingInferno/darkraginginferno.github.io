@@ -149,6 +149,9 @@ input {
 }
 
 #restart {
+    display: flex;
+    justify-content: center;
+
     min-height: 250px;
     height: 250px;
     width: 300px;

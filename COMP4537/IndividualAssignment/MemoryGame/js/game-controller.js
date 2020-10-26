@@ -90,7 +90,7 @@ function submitGame()
     window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
 
     console.log("Rendering leaderboard screen");
-    createLeaderboardScreen();
+    createLeaderboardScreen(response);
 }
 
 function fetchRequest(name, userScore) 
@@ -121,7 +121,6 @@ function fetchRequest(name, userScore)
             console.error('Error:', error)
         });
     console.log("Leaving fetchRequest");
-    console.log(answer);
     return answer;
 }
 
