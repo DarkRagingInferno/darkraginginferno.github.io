@@ -96,6 +96,8 @@ body {
     margin-top: 5%;
     font-size: 24px;
     text-align: center;
+    background-color: grey;
+    filter: opacity(50%);
 }
 
 #output {
