@@ -34,13 +34,14 @@ window.onload = () => {
     }
     else 
     {
-        console.log(window.href);
         console.log('hello there');
         createGame(rowCount, colCount);
         getBlocks();
         flashCorrectTiles(tileCount);
         setTimeout(() => { correctTiles = getAnswerTiles() }, 3700);  
         loaded = true; 
+        
+        console.log(loaded)
     }
 }
 
@@ -129,6 +130,9 @@ function fetchRequest(name, userScore)
  */
 function terminate()
 { 
+    console.log(loaded)
+    
+    
     deleteGrid();
     createLoseScreen();
     clearTimers()
