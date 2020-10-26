@@ -27,7 +27,7 @@ var loaded       = false
  * and begins a memory game.
  */
 window.onload = () => {
-    console.log(windows.location.href)
+    console.log(window.location.href)
     if (loaded == true)
     {
         return; 
