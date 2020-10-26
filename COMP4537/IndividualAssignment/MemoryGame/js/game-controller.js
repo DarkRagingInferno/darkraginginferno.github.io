@@ -8,7 +8,7 @@
 
  
 var timer        = null;
-var whiteFlash    = null;
+var whiteFlash   = null;
 var rotate       = null;
 var canClick     = false;
 var maxClicks    = 2; //2
@@ -20,7 +20,7 @@ var tileCount    = 2; //2
 var score        = 0;
 var kingOfGames  = 0;
 var leaderboard  = false;
-var loaded = false
+var loaded       = false
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets
@@ -52,6 +52,7 @@ function newGame()
     removeOutput(); 
     deleteGrid();
     createGame(rowCount, colCount);
+    playSound().play();
     getBlocks();
     flashCorrectTiles(tileCount);    
 }
@@ -345,4 +346,9 @@ function resetGame()
     maxClicks    = 2; 
     canClick     = false;
     leaderboard  = false;
+}
+
+function playSound(){
+    let audio = document.getElementById('demon');
+    return audio;
 }
