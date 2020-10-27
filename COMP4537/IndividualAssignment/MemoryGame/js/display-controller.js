@@ -173,7 +173,6 @@ function createLeaderboardScreen(response)
         arr.push(responseContainer);
     })
 
-    window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
     arr.forEach(div => {
         container.appendChild(div);
     })
