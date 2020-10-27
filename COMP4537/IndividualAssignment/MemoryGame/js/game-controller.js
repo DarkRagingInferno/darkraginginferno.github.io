@@ -110,7 +110,8 @@ function fetchRequest(name, userScore)
             console.log('Success:', data)
         })
         .then(data => {
-            createLeaderboardScreen(data)
+            // createLeaderboardScreen(data)
+            console.log('Success:', data)
         })
         .catch((error) => 
         {
