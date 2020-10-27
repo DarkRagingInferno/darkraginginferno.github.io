@@ -6,11 +6,11 @@
  * @since  09.15.2020
  */
 
-var windoWidth = window.innerWidth;
-var windowHeight = window.innerHeight;
-var height          = 0;
-var width           = 0;
-var mobileDimension = 45;
+let windoWidth = window.innerWidth;
+let windowHeight = window.innerHeight;
+let height          = 0;
+let width           = 0;
+let mobileDimension = 45;
 
 /**
 * This function creates the game.

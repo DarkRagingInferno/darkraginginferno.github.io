@@ -7,19 +7,19 @@
  */
 
  
-var timer        = null;
-var whiteFlash   = null;
-var rotate       = null;
-var canClick     = false;
-var maxClicks    = 2; //2
-var clickCounter = 0;
-var correctTiles = [];
-var rowCount     = 1; //1
-var colCount     = 1; //1
-var tileCount    = 2; //2
-var score        = 0;
-var kingOfGames  = 0;
-var leaderboard  = false;
+let timer        = null;
+let whiteFlash   = null;
+let rotate       = null;
+let canClick     = false;
+let maxClicks    = 2; //2
+let clickCounter = 0;
+let correctTiles = [];
+let rowCount     = 1; //1
+let colCount     = 1; //1
+let tileCount    = 2; //2
+let score        = 0;
+let kingOfGames  = 0;
+let leaderboard  = false;
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets

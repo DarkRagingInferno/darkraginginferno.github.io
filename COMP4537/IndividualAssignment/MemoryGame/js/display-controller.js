@@ -5,10 +5,10 @@
  * @since  09.15.2020
  */
 
-var blockArr    = [];
-var answerTiles = [];
-var rotated     = false;
-var degree;
+let blockArr    = [];
+let answerTiles = [];
+let rotated     = false;
+let degree;
 
 /**
  * This function gets all the blocks (columns) in the grid of the game.
@@ -166,7 +166,7 @@ function createLeaderboardScreen(response)
     div.setAttribute("background-Color", "yellow");
     div.setAttribute("width", "250px");
     div.setAttribute("height", "50px");
-    
+
     // container.appendChild(div);
     
     // response.forEach(res => {
