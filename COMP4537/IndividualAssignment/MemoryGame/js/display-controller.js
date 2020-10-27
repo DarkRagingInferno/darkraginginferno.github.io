@@ -187,7 +187,7 @@ function createLeaderboardScreen(response)
     restartBTN.setAttribute('value', 'Restart?');
     restartBTN.setAttribute('onclick', 'restartGame()');
     
-    return restartBTN
+    container.appendChild(restartBTN);
 }
 
 /**
