@@ -157,7 +157,6 @@ function createLeaderboardScreen(response)
     console.log(response)
 
     let container = document.getElementById('leadboard-container');
-    let restartBTN = createRestartBTN();
     
     console.log(response['recordset']);
 
@@ -169,15 +168,8 @@ function createLeaderboardScreen(response)
         scoreDiv.innerHTML = res['score'];
         responseContainer.appendChild(nameDiv);
         responseContainer.appendChild(scoreDiv);
-        console.log(responseContainer);
-        arr.push(responseContainer);
-    })
-
-    arr.forEach(div => {
-        container.appendChild(div);
-    })
-
-    container.appendChild(restartBTN);
+        container.appendChild(responseContainer);
+    }) 
 }
 
 /**
