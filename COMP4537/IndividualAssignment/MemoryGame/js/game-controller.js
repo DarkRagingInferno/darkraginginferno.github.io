@@ -19,7 +19,7 @@ let colCount     = 1; //1
 let tileCount    = 2; //2
 let score        = 0;
 let kingOfGames  = 0;
-let leaderboard  = false;
+// let leaderboard  = false;
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets
