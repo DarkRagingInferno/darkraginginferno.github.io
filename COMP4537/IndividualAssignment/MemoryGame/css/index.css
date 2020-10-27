@@ -169,13 +169,13 @@ input {
     width: 100px;
     height: 50px;
     color: black;
-    font-size: 52px;
+    font-size: 46px;
     font-weight: bold;
 }
 
 .response-child {
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-content: center;
     flex-direction: row;
 }
