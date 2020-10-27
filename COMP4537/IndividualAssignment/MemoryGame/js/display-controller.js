@@ -169,14 +169,16 @@ function createLeaderboardScreen(response)
         scoreDiv.innerHTML = res['score'];
         responseContainer.appendChild(nameDiv);
         responseContainer.appendChild(scoreDiv);
-        arr.push(responseContainer)
+        console.log(responseContainer);
+        arr.push(responseContainer);
     })
 
-    window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
-    arr.forEach(div => {
-        container.appendChild(div);
-    })
-    container.appendChild(restartBTN);
+    // window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
+    // arr.forEach(div => {
+    //     container.appendChild(div);
+    // })
+
+    // container.appendChild(restartBTN);
 }
 
 /**
