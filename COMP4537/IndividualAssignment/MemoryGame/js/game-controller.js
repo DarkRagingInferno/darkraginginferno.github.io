@@ -81,7 +81,7 @@ function submitGame()
 
 function fetchRequest(name, userScore) 
 {
-    console.log("Inside fetchRequest: ");
+    console.log("Inside fetchRequestt: ");
 
     let answer = fetch("https://memory-game-jvbp.herokuapp.com/get-scores", 
         {
