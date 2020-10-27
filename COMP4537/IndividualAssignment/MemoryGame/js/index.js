@@ -35,7 +35,6 @@ function createGame(row, col)
     createColumn(col);
  }
 
-
 /** 
 * This function creates the grid. 
 */

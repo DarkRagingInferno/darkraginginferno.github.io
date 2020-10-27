@@ -27,12 +27,9 @@ let kingOfGames  = 0;
  */
 window.onload = () => {
     if (window.location.href == 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
-    {
-        return;
-    }
+        return
     else 
     {
-        console.log('hello there');
         createGame(rowCount, colCount);
         getBlocks();
         flashCorrectTiles(tileCount);

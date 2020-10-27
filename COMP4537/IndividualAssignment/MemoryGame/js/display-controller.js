@@ -150,7 +150,7 @@ function createLoseScreen()
     gridContainer.appendChild(lostDiv);
 }
 
-function createLeaderboardScreen(response)\
+function createLeaderboardScreen(response)
 {
     console.log("The response should follow this");
     console.log(response)
