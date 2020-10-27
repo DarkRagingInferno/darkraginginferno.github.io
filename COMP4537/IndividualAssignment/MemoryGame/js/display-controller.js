@@ -166,7 +166,8 @@ function createLeaderboardScreen(response)
     div.setAttribute("background-Color", "yellow");
     div.setAttribute("width", "250px");
     div.setAttribute("height", "50px");
-    container.appendChild(div);
+    
+    // container.appendChild(div);
     
     // response.forEach(res => {
     //     let div = document.createElement('div');
@@ -175,7 +176,7 @@ function createLeaderboardScreen(response)
     //     container.appendChild(div);
     // })
 
-    container.appendChild(restartBTN);
+    // container.appendChild(restartBTN);
 
     console.log(response)
 }
