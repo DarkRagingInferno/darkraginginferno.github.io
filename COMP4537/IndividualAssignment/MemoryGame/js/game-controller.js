@@ -112,6 +112,7 @@ function fetchRequest(name, userScore)
         {
             console.error('Error:', error)
         });
+    console.log(answer);
     return answer;
 }
 
