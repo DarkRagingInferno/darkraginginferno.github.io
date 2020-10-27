@@ -36,7 +36,7 @@ window.onload = () => {
         let score     = urlParams.get("score");
 
         console.log(user, score);
-        
+
         if(user && score)
             fetchRequest(user, score);
     }
@@ -89,7 +89,7 @@ function submitGame()
     let userScore = score;
     console.log("About to enter fetchRequest()");
     // let response  = fetchRequest(userName, userScore);
-    let string = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html?user='+ userName + 'score=' +userScore;
+    let string = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html?user='+ userName + '&score=' + userScore;
     console.log(string);
     window.location.href = string;
 }
