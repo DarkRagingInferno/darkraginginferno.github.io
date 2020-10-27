@@ -152,6 +152,7 @@ function createLoseScreen()
 
 function createLeaderboardScreen(response)
 {
+    window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
     console.log("The response should follow this");
     console.log(response)
 
