@@ -154,6 +154,7 @@ function createLeaderboardScreen(response)
 {
     console.log("The response should follow this");
     console.log(response)
+    let test = {"id": "1","name": "soos", "score":"83"};
 
 
     let container = document.getElementById('leadboard-container');
@@ -161,7 +162,7 @@ function createLeaderboardScreen(response)
 
 
     let div = document.createElement('div');
-    div.appendChild(response[0]);
+    div.appendChild(test);
     div.setAttribute("background-Color", "yellow");
     container.appendChild(div);
     
