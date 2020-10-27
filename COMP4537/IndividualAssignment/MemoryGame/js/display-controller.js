@@ -150,7 +150,7 @@ function createLoseScreen()
     gridContainer.appendChild(lostDiv);
 }
 
-function createLeaderboardScreen(response)
+function createLeaderboardScreen(response)\
 {
     console.log("The response should follow this");
     console.log(response)
@@ -160,11 +160,14 @@ function createLeaderboardScreen(response)
     let restartBTN = createRestartBTN();
     
     console.log(response['recordset']);
+
     response['recordset'].forEach(res =>{
-        console.log(res);
+        let div = document.createElement("div");
+        div.innerHTML = res;
+        container.appendChild(div);
     })
 
-    // container.appendChild(restartBTN);
+    container.appendChild(restartBTN);
 }
 
 /**
