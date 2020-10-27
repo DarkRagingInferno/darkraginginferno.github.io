@@ -173,6 +173,7 @@ function createLeaderboardScreen(response)
         responseContainer.appendChild(scoreDiv);
         container.appendChild(responseContainer);
     }) 
+    leaderboard = true;
 }
 
 /**
