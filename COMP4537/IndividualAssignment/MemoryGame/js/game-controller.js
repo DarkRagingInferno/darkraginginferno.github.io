@@ -85,7 +85,9 @@ function submitGame()
     let userScore = score;
     console.log("About to enter fetchRequest()");
     // let response  = fetchRequest(userName, userScore);
-    window.location.pathname = `COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html?user=${userName}&score=${userScore}`;
+    let string = 'COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html?user='+ userName + 'score=' +userScore;
+    console.log(string);
+    window.location.pathname = string;
 }
 
 function fetchRequest(name, userScore) 
