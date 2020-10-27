@@ -116,7 +116,7 @@ function deleteLeaderboardDiv()
     if(leaderDiv.childElementCount != null)
     {
         leaderDiv.parentNode.removeChild(leaderDiv);
-        window.location.href == 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/index.html';
+        window.location.href = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/index.html';
     }
         
     else return
