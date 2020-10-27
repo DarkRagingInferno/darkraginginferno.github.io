@@ -162,6 +162,7 @@ function createLeaderboardScreen(response)
     console.log(response['recordset']);
 
     response['recordset'].forEach(res =>{
+        console.log(res['name'], res['score'])
         let div = document.createElement("div");
         div.innerHTML = res;
         container.appendChild(div);
