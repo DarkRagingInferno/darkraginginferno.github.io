@@ -160,6 +160,9 @@ function createLeaderboardScreen(response)
     let restartBTN = createRestartBTN();
     
     console.log(response['recordset']);
+    response['recordset'].forEach(res =>{
+        console.log(res);
+    })
 
     // container.appendChild(restartBTN);
 }
