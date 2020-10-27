@@ -179,7 +179,7 @@ input {
 #leaderboard-container {
     display: flex;
     justify-content: center;
-    background-Color: grey;
+    background-Color: white;
     filter: opacity(70%);
     z-index: 6;
 }
