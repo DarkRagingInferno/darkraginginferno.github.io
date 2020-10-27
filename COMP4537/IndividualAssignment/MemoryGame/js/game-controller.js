@@ -34,6 +34,9 @@ window.onload = () => {
         let urlParams = new URLSearchParams(window.location.search);
         let user      = urlParams.get("user");
         let score     = urlParams.get("score");
+
+        console.log(user, score);
+        
         if(user && score)
             fetchRequest(user, score);
     }
