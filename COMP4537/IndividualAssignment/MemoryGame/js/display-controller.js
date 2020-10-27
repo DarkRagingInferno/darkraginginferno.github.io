@@ -159,7 +159,7 @@ function createLeaderboardScreen(response)
     let container = document.getElementById('leadboard-container');
     let restartBTN = createRestartBTN();
     
-    console.log(response[1])
+    console.log(response['recordset']);
 
     container.appendChild(restartBTN);
 }
