@@ -107,11 +107,8 @@ function fetchRequest(name, userScore)
         .then(response => response.json())
         .then(data => 
         {
-            console.log('Success:', data)
-        })
-        .then(data => {
-            // createLeaderboardScreen(data)
-            console.log('Success:', data)
+            // console.log('Success:', data)
+            createLeaderboardScreen(data)
         })
         .catch((error) => 
         {
