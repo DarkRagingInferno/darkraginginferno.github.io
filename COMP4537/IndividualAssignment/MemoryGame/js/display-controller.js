@@ -164,6 +164,8 @@ function createLeaderboardScreen(response)
         let responseContainer = document.createElement('div');
         let nameDiv = document.createElement("div");
         let scoreDiv = document.createElement("div");
+        nameDiv.setAttribute('class', 'score-child')    
+        scoreDiv.setAttribute('class', 'score-child')
         nameDiv.innerHTML = res['name'];
         scoreDiv.innerHTML = res['score'];
         responseContainer.appendChild(nameDiv);

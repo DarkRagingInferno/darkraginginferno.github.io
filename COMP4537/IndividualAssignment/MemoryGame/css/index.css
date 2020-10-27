@@ -164,4 +164,18 @@ input {
     font-size: 40px;
     font-weight: bold;
 }
+
+.score-child {
+    width: 100px;
+    height: 50px;
+}
+
+#score-container {
+    display: flex;
+    justify-content: center;
+
+    background-Color: grey;
+    filter: opacity(70%);
+}
+
   
