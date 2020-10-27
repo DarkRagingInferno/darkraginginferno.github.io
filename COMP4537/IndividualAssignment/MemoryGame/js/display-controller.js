@@ -162,7 +162,7 @@ function createLeaderboardScreen(response)
     console.log(response)
 
     let container = document.getElementById('leaderboard-container');
-    let lContainer = document.getElementById('l-container');
+    let lContainer = document.getElementById('container');
     
     console.log(response['recordset']);
 
