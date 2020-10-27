@@ -162,10 +162,14 @@ function createLeaderboardScreen(response)
     console.log(response['recordset']);
 
     response['recordset'].forEach(res =>{
-        console.log(res['name'], res['score'])
-        let div = document.createElement("div");
-        div.innerHTML = res;
-        container.appendChild(div);
+        let responseContainer = document.createElement('div');
+        let nameDiv = document.createElement("div");
+        let scoreDiv = document.createElement("div");
+        nameDiv.innerHTML = res['name'];
+        scoreDiv.innerHTML = res['score'];
+        responseContainer.appendChild(nameDiv);
+        responseContainer.appendChild(scoreDiv);
+        container.appendChild(responseContainer)
     })
 
     container.appendChild(restartBTN);
