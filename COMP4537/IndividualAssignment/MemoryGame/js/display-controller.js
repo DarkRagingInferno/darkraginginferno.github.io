@@ -161,7 +161,7 @@ function createLeaderboardScreen(response)
     
     console.log(response['recordset']);
 
-    container.appendChild(restartBTN);
+    // container.appendChild(restartBTN);
 }
 
 /**
