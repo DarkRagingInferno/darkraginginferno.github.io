@@ -176,7 +176,7 @@ input {
     flex-direction: row;
 }
 
-#score-container {
+#leaderbaord-container {
     display: flex;
     justify-content: center;
     background-Color: grey;
