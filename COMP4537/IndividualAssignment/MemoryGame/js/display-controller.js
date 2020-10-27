@@ -113,9 +113,11 @@ function deleteLoseDiv()
 function deleteLeaderboardDiv()
 {
     let leaderDiv = document.getElementById('leaderboard-container');
+    let restartBTN = document.getElementById('restart');
     if(leaderDiv.childElementCount != null)
     {
         leaderDiv.parentNode.removeChild(leaderDiv);
+        restartBTN.parentNode.removeChild(restartBTN);
         window.location.href = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/index.html';
     }
         
@@ -178,6 +180,14 @@ function createLeaderboardScreen(response)
         container.appendChild(responseContainer);
     }) 
     leaderboard = true;
+
+    let restartBTN = document.createElement('input');
+    restartBTN.setAttribute('id', 'restart');
+    restartBTN.setAttribute('type', 'submit');
+    restartBTN.setAttribute('value', 'Restart?');
+    restartBTN.setAttribute('onclick', 'restartGame()');
+    
+    return restartBTN
 }
 
 /**
