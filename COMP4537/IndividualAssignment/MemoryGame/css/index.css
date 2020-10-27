@@ -177,6 +177,8 @@ input {
 }
 
 #score-container {
+    display: flex;
+    justify-content: center;
     background-Color: grey;
     filter: opacity(70%);
     z-index: 6;
