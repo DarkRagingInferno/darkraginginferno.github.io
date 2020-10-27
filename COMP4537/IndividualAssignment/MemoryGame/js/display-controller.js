@@ -158,11 +158,11 @@ function createLoseScreen()
 
 function createLeaderboardScreen(response)
 {
-    let arr = [];
     console.log("The response should follow this");
     console.log(response)
 
     let container = document.getElementById('leaderboard-container');
+    let lContainer = document.getElementById('l-container')
     
     console.log(response['recordset']);
 
@@ -187,7 +187,7 @@ function createLeaderboardScreen(response)
     restartBTN.setAttribute('value', 'Restart?');
     restartBTN.setAttribute('onclick', 'restartGame()');
     
-    document.body.appendChild(restartBTN);
+    lContainer.appendChild(restartBTN);
 }
 
 /**
