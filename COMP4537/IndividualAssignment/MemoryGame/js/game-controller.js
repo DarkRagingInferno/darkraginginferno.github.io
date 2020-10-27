@@ -83,7 +83,7 @@ function submitGame()
 
     console.log(response[0]);
     console.log("could it be the next one instead?");
-    console.log(response['recordset'][0]);
+    console.log(response['recordsets'][0]);
 
     // window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
     createLeaderboardScreen(response);
