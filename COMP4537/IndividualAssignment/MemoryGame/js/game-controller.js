@@ -19,7 +19,6 @@ let colCount     = 1; //1
 let tileCount    = 2; //2
 let score        = 0;
 let kingOfGames  = 0;
-let leaderboard  = false;
 
 /**
  *  This anonymous function loads as soon as the window is ready. It creates, sets
@@ -68,8 +67,10 @@ function newGame()
  */
 function restartGame() {
     score = 0;
-    if (!leaderboard) deleteLoseDiv();
-    else  deleteLeaderboardDiv()
+    if (window.location.href == 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html') 
+        deleteLeaderboardDiv();
+    else  
+        deleteLoseDiv();
     resetGame()
     setScore(score);
     createGame(rowCount, colCount);
