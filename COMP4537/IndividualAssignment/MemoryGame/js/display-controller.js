@@ -162,8 +162,10 @@ function createLeaderboardScreen(response)
 
 
     let div = document.createElement('div');
-    div.appendChild(test);
+    div.innerHTML = test;
     div.setAttribute("background-Color", "yellow");
+    div.setAttribute("width", "250px");
+    div.setAttribute("height", "50px");
     container.appendChild(div);
     
     // response.forEach(res => {
