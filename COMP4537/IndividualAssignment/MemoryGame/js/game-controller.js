@@ -100,7 +100,7 @@ function fetchRequest(name, userScore)
         .then(response => response.json())
         .then(data => 
         {
-            window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
+            setTimeout(window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html", 3000);
             createLeaderboardScreen(data);
         })
         .catch((error) => 
