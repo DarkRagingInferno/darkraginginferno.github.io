@@ -28,6 +28,14 @@ let kingOfGames  = 0;
 window.onload = () => {
     if (window.location.href == 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
         return
+    else if(window.location.pathname == '/leaderboard.html')
+    {
+        let urlParams = new URLSearchParams(window.location.search);
+        let user      = urlParams.get("user");
+        let score     = urlParams.get("score");
+        if(user && score)
+            fetchRequest(user, score);
+    }
     else 
     {
         createGame(rowCount, colCount);
@@ -76,7 +84,8 @@ function submitGame()
 
     let userScore = score;
     console.log("About to enter fetchRequest()");
-    let response  = fetchRequest(userName, userScore);
+    // let response  = fetchRequest(userName, userScore);
+    window.location.pathname = `leaderboard.html?user=${userName}&score=${userScore}`;
 }
 
 function fetchRequest(name, userScore) 
