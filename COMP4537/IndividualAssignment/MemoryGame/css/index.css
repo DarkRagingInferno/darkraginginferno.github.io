@@ -167,7 +167,7 @@ input {
 
 .score-child {
     width: 100px;
-    height: 80px;
+    height: 100px;
     color: black;
     font-size: 46px;
     font-weight: bold;
@@ -175,8 +175,7 @@ input {
 
 .response-child {
     display: flex;
-    /* justify-content: center; */
-    align-content: center;
+    justify-content: center;
     flex-direction: row;
 }
 
