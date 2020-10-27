@@ -30,6 +30,7 @@ window.onload = () => {
         return
     else if(window.location.pathname == '/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html')
     {
+        console.log("Inside the window load else")
         let urlParams = new URLSearchParams(window.location.search);
         let user      = urlParams.get("user");
         let score     = urlParams.get("score");
