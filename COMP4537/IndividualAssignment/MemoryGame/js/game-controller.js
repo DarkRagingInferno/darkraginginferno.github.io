@@ -79,10 +79,9 @@ function submitGame()
 
     let userScore = score;
     console.log("About to enter fetchRequest()");
-    let response  = fetchRequest(userName, userScore)
-    .then(console.log("Rendering leaderboard screen"));
-    // .then(window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html")
-    console.log(response.data);
+    let response  = fetchRequest(userName, userScore);
+
+    window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
     createLeaderboardScreen(response);
 }
 
@@ -107,8 +106,7 @@ function fetchRequest(name, userScore)
         .then(response => response.json())
         .then(data => 
         {
-            // console.log('Success:', data)
-            createLeaderboardScreen(data)
+            return data;
         })
         .catch((error) => 
         {
