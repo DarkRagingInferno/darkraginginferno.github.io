@@ -159,7 +159,7 @@ function createLeaderboardScreen(response)
     let container = document.getElementById('leadboard-container');
     let restartBTN = createRestartBTN();
     
-    response.forEach(res => {
+    response[1].forEach(res => {
         // let div = document.createElement('div');
         // div.appendChild(res);
         // div.setAttribute("background-Color", "yellow");
