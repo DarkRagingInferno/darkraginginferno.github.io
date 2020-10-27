@@ -153,7 +153,7 @@ function createLoseScreen()
 function createLeaderboardScreen(response)
 {
     console.log("The response should follow this");
-    console.log(response.data)
+    console.log(response)
 
 
     let container = document.getElementById('leadboard-container');
