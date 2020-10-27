@@ -154,31 +154,20 @@ function createLeaderboardScreen(response)
 {
     console.log("The response should follow this");
     console.log(response)
-    let test = {"id": "1","name": "soos", "score":"83"};
 
 
     let container = document.getElementById('leadboard-container');
     let restartBTN = createRestartBTN();
-
-
-    let div = document.createElement('div');
-    div.innerHTML = test;
-    div.setAttribute("background-Color", "yellow");
-    div.setAttribute("width", "250px");
-    div.setAttribute("height", "50px");
-
-    // container.appendChild(div);
     
-    // response.forEach(res => {
-    //     let div = document.createElement('div');
-    //     div.appendChild(res);
-    //     div.setAttribute("background-Color", "yellow");
-    //     container.appendChild(div);
-    // })
+    response.forEach(res => {
+        // let div = document.createElement('div');
+        // div.appendChild(res);
+        // div.setAttribute("background-Color", "yellow");
+        // container.appendChild(div);
+        console.log(res);
+    })
 
-    // container.appendChild(restartBTN);
-
-    console.log(response)
+    container.appendChild(restartBTN);
 }
 
 /**
