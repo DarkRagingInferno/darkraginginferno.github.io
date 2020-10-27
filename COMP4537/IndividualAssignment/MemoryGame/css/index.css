@@ -190,10 +190,10 @@ input {
     z-index: 6;
 }
 
-body > #restart {
+#l-container {
     display: flex;
-    justify-self: center;
-    align-self: center;
+    flex-direction: column;
+    justify-content: center;
 }
 
   
