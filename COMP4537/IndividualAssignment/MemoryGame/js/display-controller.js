@@ -168,7 +168,7 @@ function createLeaderboardScreen(response)
 
     container.appendChild(restartBTN);
 
-    console.log(response.data)
+    console.log(response)
 }
 
 /**
