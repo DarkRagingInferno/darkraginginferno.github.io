@@ -176,7 +176,7 @@ input {
     flex-direction: row;
 }
 
-#leaderbaord-container {
+#leaderboard-container {
     display: flex;
     justify-content: center;
     background-Color: grey;
