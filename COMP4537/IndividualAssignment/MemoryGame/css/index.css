@@ -173,6 +173,8 @@ input {
 
 .response-child {
     display: flex;
+    justify-content: center;
+    align-content: center;
     flex-direction: row;
 }
 
