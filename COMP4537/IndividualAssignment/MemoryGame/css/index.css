@@ -167,10 +167,11 @@ input {
 
 .score-child {
     width: 100px;
-    height: 100px;
+    height: 80px;
     color: black;
     font-size: 46px;
     font-weight: bold;
+    padding-left: 15px;
 }
 
 .response-child {
