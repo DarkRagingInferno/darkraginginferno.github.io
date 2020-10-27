@@ -178,6 +178,7 @@ input {
 
 #leaderboard-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-Color: white;
     filter: opacity(70%);
