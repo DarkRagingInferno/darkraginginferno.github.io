@@ -209,6 +209,10 @@ input {
     z-index: 6;
 }
 
+.user-only {
+    width: 400px;
+}
+
 #user-container {
     display: flex;
     flex-direction: row;
