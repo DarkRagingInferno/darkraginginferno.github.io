@@ -119,8 +119,7 @@ function deleteLeaderboardDiv()
         leaderDiv.parentNode.removeChild(leaderDiv);
         restartBTN.parentNode.removeChild(restartBTN);
         window.location.href = 'https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/index.html';
-    }
-        
+    }     
     else return
 }
 
@@ -165,8 +164,9 @@ function createLeaderboardScreen(response)
     let lContainer = document.getElementById('container');
     
     console.log(response['recordset']);
-
-    response['recordset'].forEach(res =>{
+    for (let i = 0; i < 5; i++)
+    {
+        res = response.recordset[i];
         let responseContainer = document.createElement('div');
         let nameDiv = document.createElement("div");
         let scoreDiv = document.createElement("div");
@@ -178,7 +178,10 @@ function createLeaderboardScreen(response)
         responseContainer.appendChild(nameDiv);
         responseContainer.appendChild(scoreDiv);
         container.appendChild(responseContainer);
-    }) 
+    }
+
+    // response['recordset'].forEach(res =>{
+        
     leaderboard = true;
 
     let restartBTN = document.createElement('input');
