@@ -201,6 +201,9 @@ input {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     background-Color: white;
     filter: opacity(70%);
     z-index: 6;
@@ -209,8 +212,7 @@ input {
 #user-container {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: center;
+    text-align: center;
 }
 
 #l-container {
