@@ -160,8 +160,8 @@ function createLeaderboardScreen(response, username, score)
     console.log("The response should follow this");
     let index = null;
 
-    let lContainer = document.getElementById('container');
-    let container = document.getElementById('leaderboard-container');
+    let container = document.getElementById('container');
+    let lContainer = document.getElementById('leaderboard-container');
 
     let userContainer = document.createElement('div');
     let userRankDiv   = document.createElement('div');
@@ -179,7 +179,7 @@ function createLeaderboardScreen(response, username, score)
     userContainer.appendChild(userNameDiv);
     userContainer.appendChild(userScoreDiv);
 
-    lContainer.appendChild(userContainer);
+    container.prependChild(userContainer);
     
     console.log(response['recordset']);
     for (let i = 0; i < 5; i++)
@@ -198,7 +198,7 @@ function createLeaderboardScreen(response, username, score)
         responseContainer.appendChild(rankDiv);
         responseContainer.appendChild(nameDiv);
         responseContainer.appendChild(scoreDiv);
-        container.appendChild(responseContainer);
+        lContainer.appendChild(responseContainer);
     }
 
     for(let i = 0; i < response['recordset'].length; i++)
@@ -216,7 +216,7 @@ function createLeaderboardScreen(response, username, score)
     restartBTN.setAttribute('value', 'Restart?');
     restartBTN.setAttribute('onclick', 'restartGame()');
     
-    lContainer.appendChild(restartBTN);
+    container.appendChild(restartBTN);
 }
 
 /**
