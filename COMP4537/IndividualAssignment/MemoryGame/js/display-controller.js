@@ -162,6 +162,17 @@ function createLeaderboardScreen(response, username, score)
 
     let index = null;
 
+    for(let i = 0; i < response['recordset'].length; i++)
+    {
+        if (response["recordset"][i].name == username && response["recordset"][i].score == score)
+        {
+            index = i + 1;
+            console.log(index)
+            return;
+        }
+        
+    }
+    
     let container = document.getElementById('container');
     let lContainer = document.getElementById('leaderboard-container');
 
@@ -211,19 +222,6 @@ function createLeaderboardScreen(response, username, score)
         responseContainer.appendChild(scoreDiv);
         lContainer.appendChild(responseContainer);
     }
-
-    for(let i = 0; i < response['recordset'].length; i++)
-    {
-        if (response["recordset"][i].name == username && response["recordset"][i].score == score)
-        {
-            index = i + 1;
-            console.log(index)
-            return;
-        }
-        
-    }
-    
-    console.log(index)
 
     let restartBTN = document.createElement('input');
     restartBTN.setAttribute('id', 'restart');
