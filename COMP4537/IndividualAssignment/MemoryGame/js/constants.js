@@ -7,7 +7,7 @@ const BASE_URL    = "https://darkraginginferno.github.io/COMP4537/IndividualAssi
 const SCORE       = "get-score";
 const LEADERBOARD = "leaderboard.html";
 const TRANSPARENT = "transparent";
-const YOURRANK    = "Your Rank"
+const YOURRANK    = "Your Rank";
 
 
 const winOutputs = [
