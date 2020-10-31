@@ -195,16 +195,16 @@ function createLeaderboardScreen(response, username, score)
     userScoreDiv.setAttribute('class', 'user-child');
     
     userOnlyText.innerHTML = YOURRANK;
-    leaderboardTitle.innerHTML  = LEADERBOARDTITLE
+    leaderboardTitle.innerHTML  = LEADERBOARDTITLE;
     userRankDiv.innerHTML  = index;
     userNameDiv.innerHTML  = username;
     userScoreDiv.innerHTML = score;
-    userContainer.appendChild(leaderboardTitle);
     userContainer.appendChild(userRankDiv);
     userContainer.appendChild(userNameDiv);
     userContainer.appendChild(userScoreDiv);
-    userOnly.appendChild(userOnlyText)
-    userOnly.appendChild(userContainer)
+    userOnly.appendChild(userOnlyText);
+    userOnly.appendChild(userContainer);
+    userOnly.appendChild(leaderboardTitle);
 
     container.parentNode.prepend(userOnly);
     
