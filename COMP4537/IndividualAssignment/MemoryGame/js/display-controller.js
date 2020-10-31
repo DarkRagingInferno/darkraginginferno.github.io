@@ -181,7 +181,7 @@ function createLeaderboardScreen(response, username, score)
     userContainer.appendChild(userNameDiv);
     userContainer.appendChild(userScoreDiv);
 
-    container.prependChild(userContainer);
+    container.parentNode.prepend(userContainer);
     
     console.log(response['recordset']);
     for (let i = 0; i < 5; i++)
