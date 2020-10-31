@@ -168,7 +168,7 @@ function createLeaderboardScreen(response, username, score)
         {
             index = i + 1;
             console.log(index);
-            return;
+            break;
         }
         
     }
