@@ -214,15 +214,10 @@ function createLeaderboardScreen(response, username, score)
 
     for(let i = 0; i < response['recordset'].length; i++)
     {
-        console.log(response.recordset)
-        console.log(response.recordset[i])
-        console.log(response.recordset[i].name)
-        console.log(response["recordset"][i]['name'])
-        console.log(response.recordset[i]['name'])
-
-        if (response["recordset"][i].name == username && response["recordset"][i].name.score == score)
+        if (response["recordset"][i].name == username && response["recordset"][i].score == score)
         {
-            index = i  + 1;
+            index = i + 1;
+            console.log(index)
             return;
         }
         
