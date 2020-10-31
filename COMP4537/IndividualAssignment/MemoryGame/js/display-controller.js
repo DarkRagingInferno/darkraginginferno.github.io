@@ -179,7 +179,7 @@ function createLeaderboardScreen(response, username, score)
 
     let userOnly      = document.createElement('div');
     let userOnlyText  = document.createElement('div');
-    let leaderboard = document.createElement('div');
+    let leaderboardTitle = document.createElement('div');
     let userContainer = document.createElement('div');
     let userRankDiv   = document.createElement('div');
     let userNameDiv   = document.createElement('div');
