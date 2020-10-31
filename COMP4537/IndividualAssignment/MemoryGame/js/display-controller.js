@@ -206,7 +206,7 @@ function createLeaderboardScreen(response, username, score)
         rankDiv.setAttribute('class', 'score-child');
         nameDiv.innerHTML = res['name'];
         scoreDiv.innerHTML = res['score'];
-        rankDiv.innerHTML = i;
+        rankDiv.innerHTML = i + 1;
         responseContainer.appendChild(rankDiv);
         responseContainer.appendChild(nameDiv);
         responseContainer.appendChild(scoreDiv);
@@ -216,7 +216,11 @@ function createLeaderboardScreen(response, username, score)
     for(let i = 0; i < response['recordset'].length; i++)
     {
         if (response.recordset[i].name == username && response.recordset[i].score == score)
-            return index = i;
+        {
+            index = i  + 1;
+            return;
+        }
+        
     }
     
     console.log(index)
