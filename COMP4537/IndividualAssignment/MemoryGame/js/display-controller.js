@@ -201,8 +201,6 @@ function createLeaderboardScreen(response, username, score)
         container.appendChild(responseContainer);
     }
 
-    // response['recordset'].forEach(res =>{
-
     for(let i = 0; i < response['recordset'].length; i++)
     {
         if (response.recordset[i].name == username && response.recordset[i].score == score)

@@ -182,7 +182,7 @@ input {
     flex-direction: row;
 }
 
-#leaderboard-container {
+#leaderboard-container, #userContainer {
     display: flex;
     flex-direction: column;
     justify-content: center;
