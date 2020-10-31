@@ -158,6 +158,8 @@ function createLoseScreen()
 function createLeaderboardScreen(response, username, score)
 {
     console.log("The response should follow this");
+    leaderboard = true;
+
     let index = null;
 
     let container = document.getElementById('container');
@@ -208,7 +210,6 @@ function createLeaderboardScreen(response, username, score)
     }
     
     console.log(index)
-    leaderboard = true;
 
     let restartBTN = document.createElement('input');
     restartBTN.setAttribute('id', 'restart');
