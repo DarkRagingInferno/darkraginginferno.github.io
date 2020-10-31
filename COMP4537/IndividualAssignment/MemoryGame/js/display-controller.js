@@ -199,13 +199,13 @@ function createLeaderboardScreen(response, username, score)
     userRankDiv.innerHTML  = index;
     userNameDiv.innerHTML  = username;
     userScoreDiv.innerHTML = score;
+    userContainer.appendChild(leaderboardTitle);
     userContainer.appendChild(userRankDiv);
     userContainer.appendChild(userNameDiv);
     userContainer.appendChild(userScoreDiv);
     userOnly.appendChild(userOnlyText)
     userOnly.appendChild(userContainer)
 
-    container.parentNode.prepend(leaderboardTitle);
     container.parentNode.prepend(userOnly);
     
     for (let i = 0; i < 5; i++)
