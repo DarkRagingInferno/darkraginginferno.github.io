@@ -179,7 +179,7 @@ input {
     width: 100px;
     height: 80px;
     color: black;
-    font-size: 24px;
+    font-size: 36px;
     font-weight: bold;
     padding-left: 80px;
 }
@@ -189,6 +189,12 @@ input {
     width: 400px;
     justify-content: center;
     flex-direction: row;
+}
+
+.user-text {
+    font-size: 42px;
+    font-style: italic;
+    font-weight: bold;
 }
 
 #leaderboard-container, .user-only {
@@ -204,6 +210,7 @@ input {
     display: flex;
     flex-direction: row;
     align-content: center;
+    justify-content: center;
 }
 
 #l-container {

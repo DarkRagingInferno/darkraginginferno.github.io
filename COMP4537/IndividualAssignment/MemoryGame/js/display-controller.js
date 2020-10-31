@@ -171,6 +171,8 @@ function createLeaderboardScreen(response, username, score)
     let userRankDiv   = document.createElement('div');
     let userNameDiv   = document.createElement('div');
     let userScoreDiv  = document.createElement('div');
+
+    userOnlyText.setAttribute('class', 'user-text');
     userOnly.setAttribute('class', 'user-only');
     userContainer.setAttribute('class', 'response-child');
     userContainer.setAttribute('id', 'user-container');
