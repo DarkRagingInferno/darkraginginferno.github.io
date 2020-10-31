@@ -202,6 +202,8 @@ input {
     flex-direction: column;
     justify-content: center;
     align-content: center;
+    justify-items: center;
+    align-items: center;
 
     width: 400px;
     background-Color: white;
