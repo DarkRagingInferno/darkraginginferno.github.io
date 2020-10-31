@@ -167,11 +167,12 @@ function createLeaderboardScreen(response, username, score)
         if (response["recordset"][i].name == username && response["recordset"][i].score == score)
         {
             index = i + 1;
-            console.log(index)
+            console.log(index);
             return;
         }
         
     }
+    console.log("passed first loop");
     
     let container = document.getElementById('container');
     let lContainer = document.getElementById('leaderboard-container');
