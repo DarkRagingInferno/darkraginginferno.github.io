@@ -182,7 +182,7 @@ input {
     flex-direction: row;
 }
 
-#leaderboard-container, #user-only {
+#leaderboard-container, .user-only {
     display: flex;
     flex-direction: column;
     justify-content: center;
