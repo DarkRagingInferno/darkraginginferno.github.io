@@ -165,23 +165,30 @@ function createLeaderboardScreen(response, username, score)
     let container = document.getElementById('container');
     let lContainer = document.getElementById('leaderboard-container');
 
+    let userOnly      = document.createElement('div');
+    let userOnlyText  = document.createElement('div');
     let userContainer = document.createElement('div');
     let userRankDiv   = document.createElement('div');
     let userNameDiv   = document.createElement('div');
     let userScoreDiv  = document.createElement('div');
+    userOnly.setAttribute('class', 'user-only');
     userContainer.setAttribute('class', 'response-child');
+    userContainer.setAttribute('id', 'user-container');
     userRankDiv.setAttribute('class', 'score-child');
     userNameDiv.setAttribute('class', 'score-child');
     userScoreDiv.setAttribute('class', 'score-child');
     
+    userOnlyText.innerHTML = YOURRANK;
     userRankDiv.innerHTML  = index;
     userNameDiv.innerHTML  = username;
     userScoreDiv.innerHTML = score;
     userContainer.appendChild(userRankDiv);
     userContainer.appendChild(userNameDiv);
     userContainer.appendChild(userScoreDiv);
+    userOnly.appendChild(userOnlyText)
+    userOnly.appendChild(userContainer)
 
-    container.parentNode.prepend(userContainer);
+    container.parentNode.prepend(userOnly);
     
     console.log(response['recordset']);
     for (let i = 0; i < 5; i++)

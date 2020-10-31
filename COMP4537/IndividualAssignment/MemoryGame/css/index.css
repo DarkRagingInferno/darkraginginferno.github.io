@@ -166,7 +166,7 @@ input {
     font-weight: bold;
 }
 
-.score-child {
+.score-child, .user-only {
     width: 100px;
     height: 80px;
     color: black;
@@ -182,7 +182,7 @@ input {
     flex-direction: row;
 }
 
-#leaderboard-container, #userContainer {
+#leaderboard-container, #user-only {
     display: flex;
     flex-direction: column;
     justify-content: center;
