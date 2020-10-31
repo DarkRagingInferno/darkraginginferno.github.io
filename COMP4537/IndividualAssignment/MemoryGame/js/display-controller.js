@@ -174,9 +174,9 @@ function createLeaderboardScreen(response, username, score)
     userOnly.setAttribute('class', 'user-only');
     userContainer.setAttribute('class', 'response-child');
     userContainer.setAttribute('id', 'user-container');
-    userRankDiv.setAttribute('class', 'score-child');
-    userNameDiv.setAttribute('class', 'score-child');
-    userScoreDiv.setAttribute('class', 'score-child');
+    userRankDiv.setAttribute('class', 'user-child');
+    userNameDiv.setAttribute('class', 'user-child');
+    userScoreDiv.setAttribute('class', 'user-child');
     
     userOnlyText.innerHTML = YOURRANK;
     userRankDiv.innerHTML  = index;
@@ -201,6 +201,7 @@ function createLeaderboardScreen(response, username, score)
         responseContainer.setAttribute('class', 'response-child');  
         nameDiv.setAttribute('class', 'score-child');   
         scoreDiv.setAttribute('class', 'score-child');
+        rankDiv.setAttribute('class', 'score-child');
         nameDiv.innerHTML = res['name'];
         scoreDiv.innerHTML = res['score'];
         rankDiv.innerHTML = i;
