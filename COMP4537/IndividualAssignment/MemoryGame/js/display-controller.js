@@ -206,7 +206,7 @@ function createLeaderboardScreen(response, username, score)
     userOnly.appendChild(userContainer);
     userOnly.appendChild(leaderboardTitle);
 
-    container.parentNode.prepend(userOnly);
+    lContainer.parentNode.prepend(userOnly);
     
     for (let i = 0; i < 5; i++)
     {

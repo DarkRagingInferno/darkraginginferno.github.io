@@ -197,14 +197,12 @@ input {
     font-weight: bold;
 }
 
-#leaderboard-container, .user-only {
+#leaderboard-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-content: center;
-    justify-self: center;
-    align-self: center;
-    
+
     width: 400px;
     background-Color: white;
     filter: opacity(70%);
