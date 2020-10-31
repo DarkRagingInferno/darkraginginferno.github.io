@@ -133,9 +133,15 @@ function fetchRequest(name, userScore)
  */
 function terminate()
 {     
-    deleteGrid();
-    createLoseScreen();
-    clearTimers()
+    var r = confirm(QUIT);
+    if (r)
+    {
+        deleteGrid();
+        createLoseScreen();
+        clearTimers()
+    }
+    else return
+
 }
 
 function clearTimers(){

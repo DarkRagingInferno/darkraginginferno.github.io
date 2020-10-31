@@ -8,7 +8,8 @@ const SCORE             = "get-score";
 const LEADERBOARD       = "leaderboard.html";
 const TRANSPARENT       = "transparent";
 const YOURRANK          = "Your Rank";
-const LEADERBOARDTITLE  = "Leaderboard"
+const LEADERBOARDTITLE  = "Leaderboard";
+const QUIT              = "Are  you sure you want to be a quitter?";
 
 
 const winOutputs = [
