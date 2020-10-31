@@ -155,13 +155,31 @@ function createLoseScreen()
     gridContainer.appendChild(lostDiv);
 }
 
-function createLeaderboardScreen(response)
+function createLeaderboardScreen(response, username, score)
 {
     console.log("The response should follow this");
-    console.log(response)
+    let index = null;
 
-    let container = document.getElementById('leaderboard-container');
     let lContainer = document.getElementById('container');
+    let container = document.getElementById('leaderboard-container');
+
+    let userContainer = document.createElement('div');
+    let userRankDiv   = document.createElement('div');
+    let userNameDiv   = document.createElement('div');
+    let userScoreDiv  = document.createElement('div');
+    userContainer.setAttribute('class', 'response-child');
+    userRankDiv.setAttribute('class', 'score-child');
+    userNameDiv.setAttribute('class', 'score-child');
+    userScoreDiv.setAttribute('class', 'score-child');
+    
+    userRankDiv.innerHTML  = index;
+    userNameDiv.innerHTML  = username;
+    userScoreDiv.innerHTML = score;
+    userContainer.appendChild(userRankDiv);
+    userContainer.appendChild(userNameDiv);
+    userContainer.appendChild(userScoreDiv);
+
+    lContainer.appendChild(userContainer);
     
     console.log(response['recordset']);
     for (let i = 0; i < 5; i++)
@@ -170,18 +188,28 @@ function createLeaderboardScreen(response)
         let responseContainer = document.createElement('div');
         let nameDiv = document.createElement("div");
         let scoreDiv = document.createElement("div");
-        responseContainer.setAttribute('class', 'response-child')    
-        nameDiv.setAttribute('class', 'score-child')    
-        scoreDiv.setAttribute('class', 'score-child')
+        let rankDiv = document.createElement("div");
+        responseContainer.setAttribute('class', 'response-child');  
+        nameDiv.setAttribute('class', 'score-child');   
+        scoreDiv.setAttribute('class', 'score-child');
         nameDiv.innerHTML = res['name'];
         scoreDiv.innerHTML = res['score'];
+        rankDiv.innerHTML = i;
+        responseContainer.appendChild(rankDiv);
         responseContainer.appendChild(nameDiv);
         responseContainer.appendChild(scoreDiv);
         container.appendChild(responseContainer);
     }
 
     // response['recordset'].forEach(res =>{
-        
+
+    for(let i = 0; i < response['recordset'].length; i++)
+    {
+        if (response.recordset[i].name == username && response.recordset[i].score == score)
+            return index = i;
+    }
+    
+    console.log(index)
     leaderboard = true;
 
     let restartBTN = document.createElement('input');

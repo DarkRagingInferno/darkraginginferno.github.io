@@ -118,7 +118,7 @@ function fetchRequest(name, userScore)
         .then(data => 
         {
             // window.location.href = "https://darkraginginferno.github.io/COMP4537/IndividualAssignment/MemoryGame/html/leaderboard.html";
-            createLeaderboardScreen(data);
+            createLeaderboardScreen(data, name, userScore);
         })
         .catch((error) => 
         {
