@@ -177,6 +177,7 @@ input {
 
 .response-child {
     display: flex;
+    width: 400px;
     justify-content: center;
     flex-direction: row;
 }
