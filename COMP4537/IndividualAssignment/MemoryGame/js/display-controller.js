@@ -192,7 +192,6 @@ function createLeaderboardScreen(response, username, score)
 
     container.parentNode.prepend(userOnly);
     
-    console.log(response['recordset']);
     for (let i = 0; i < 5; i++)
     {
         res = response.recordset[i];
@@ -215,7 +214,7 @@ function createLeaderboardScreen(response, username, score)
 
     for(let i = 0; i < response['recordset'].length; i++)
     {
-        if (response.recordset[i].name == username && response.recordset[i].score == score)
+        if (response["recordset"][i].name == username && response["recordset"][i].name.score == score)
         {
             index = i  + 1;
             return;
