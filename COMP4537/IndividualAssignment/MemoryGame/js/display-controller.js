@@ -217,7 +217,7 @@ function createLeaderboardScreen(response, username, score)
         console.log(response.recordset)
         console.log(response.recordset[i])
         console.log(response.recordset[i].name)
-        console.log(response.["recordset"][i]['name'])
+        console.log(response["recordset"][i]['name'])
         console.log(response.recordset[i]['name'])
 
         if (response["recordset"][i].name == username && response["recordset"][i].name.score == score)
