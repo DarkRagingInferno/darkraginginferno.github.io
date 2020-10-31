@@ -186,7 +186,7 @@ function createLeaderboardScreen(response, username, score)
     let userScoreDiv  = document.createElement('div');
 
     userOnlyText.setAttribute('class', 'user-text');
-    leaderboard.setAttribute('class', 'user-text');
+    leaderboardTitle.setAttribute('class', 'user-text');
     userOnly.setAttribute('class', 'user-only');
     userContainer.setAttribute('class', 'response-child');
     userContainer.setAttribute('id', 'user-container');
@@ -195,7 +195,7 @@ function createLeaderboardScreen(response, username, score)
     userScoreDiv.setAttribute('class', 'user-child');
     
     userOnlyText.innerHTML = YOURRANK;
-    leaderboard.innerHTML  = LEADERBOARDTITLE
+    leaderboardTitle.innerHTML  = LEADERBOARDTITLE
     userRankDiv.innerHTML  = index;
     userNameDiv.innerHTML  = username;
     userScoreDiv.innerHTML = score;
@@ -205,7 +205,7 @@ function createLeaderboardScreen(response, username, score)
     userOnly.appendChild(userOnlyText)
     userOnly.appendChild(userContainer)
 
-    container.parentNode.prepend(leaderboard);
+    container.parentNode.prepend(leaderboardTitle);
     container.parentNode.prepend(userOnly);
     
     for (let i = 0; i < 5; i++)
