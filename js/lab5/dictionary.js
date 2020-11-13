@@ -23,8 +23,8 @@ const createEntry = (word, def) =>
 
 const getWord = (word) =>
 {
-    let word = fetch('https://dictionary-jvbp.herokuapp.com/api/definition');
-    console.log(word)
+    let foundWord = fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`);
+    console.log(foundWord)
 }
 
 const submit = () =>
