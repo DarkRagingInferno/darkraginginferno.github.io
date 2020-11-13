@@ -34,7 +34,7 @@ body{
     padding-bottom: 15px;
 }
 
-.title, subtitle {
+.title, .subtitle {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
