@@ -1,3 +1,8 @@
+window.onload = () => {
+    console.log('RELOADED')
+}
+
+
 const createEntry = (word, def) => 
 {
     let req = fetch('https://dictionary-jvbp.herokuapp.com/api/definition/new-word',
