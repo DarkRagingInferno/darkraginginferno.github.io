@@ -63,7 +63,6 @@ const appendDef = (word, jObj) => {
 
     termDiv.innerHTML = word;
     // defDiv.innerHTML = jObj[k];
-    console.log(jObj.k)
-    console.log(jObj[k])
+    console.log(jObj)
 
 }
