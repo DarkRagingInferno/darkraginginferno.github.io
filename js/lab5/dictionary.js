@@ -30,7 +30,10 @@ const createEntry = (word, def) =>
 const getWord = (word) =>
 {
     console.log('Entering GET WORD')
-    let foundWord = fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`);
+    let foundWord = null
+    fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`)
+    .then(res => foundWord = res)
+    .then(data => console.log(data));
     console.log(foundWord)
 }
 
