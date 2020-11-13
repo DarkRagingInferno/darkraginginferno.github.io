@@ -33,7 +33,7 @@ const createEntry = (word, def) =>
 const getWord = async (word) =>
 {
     console.log('Entering GET WORD')
-    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`);
+    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definitions?word=${word}`);
     // let foundWord = fetch(`localhost:3000/api/definitions?word=${word}`);
     let foundWordText = await foundWord.text()
     console.log(foundWordText);
