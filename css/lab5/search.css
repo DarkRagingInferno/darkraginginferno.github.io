@@ -93,3 +93,7 @@ body{
     flex-direction: column;
 }
 
+#term, #definition {
+    display: flex;
+    just
+}
