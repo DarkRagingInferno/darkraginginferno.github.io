@@ -94,7 +94,11 @@ body{
     justify-content: start;
 }
 
-/* #term, #definition {
-    display: flex;
-    justify-content: start;
-} */
+#term #definition {
+    color: white;
+}
+
+#term {
+    font-size: 18px;
+    font-weight: bold;
+}
