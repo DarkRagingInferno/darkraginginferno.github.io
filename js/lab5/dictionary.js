@@ -33,3 +33,13 @@ const submit = () =>
    getWord(query)
 }
 
+const goToIndex = () => {
+    console.log("I should change to index")
+
+    window.location.href="https://darkraginginferno.github.io/COMP4537//labs/5/dictionary/index.html"
+}
+
+const goToSearch = () => {
+    console.log("I should change to search")
+    window.location.href="https://darkraginginferno.github.io/COMP4537//labs/5/dictionary/search.html"
+}
