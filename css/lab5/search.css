@@ -76,5 +76,11 @@ body{
     height: 32px;
     margin-left: 2px;
  }
+ 
+ button {
+    width: 100px;
+    height: 35px;
+}
+
 
 
