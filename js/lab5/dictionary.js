@@ -11,13 +11,13 @@ const createEntry = (word, def) =>
     let req = fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
     {
         method: 'POST',
-        headers:
+        headers: 
         {
             "Accept": "application/json",
             "Content-Type": "application/json",
         },
-        body: JSON.stringify
-        ({
+        body: JSON.stringify(
+        {
             "word": word,
             "definition": def
         })
