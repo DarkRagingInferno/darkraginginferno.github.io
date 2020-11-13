@@ -22,7 +22,7 @@ const createEntry = (word, def) =>
             "definition": def
         })
     })
-    .then(response => response.json())
+    .then(response => response.text())
     .then(data => console.log(data))
     .catch(err => console.error('Error', err))
     
@@ -30,12 +30,13 @@ const createEntry = (word, def) =>
     return req
 }
 
-const getWord = (word) =>
+const getWord = async (word) =>
 {
     console.log('Entering GET WORD')
-    let foundWord = fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`).then();
+    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`);
     // let foundWord = fetch(`localhost:3000/api/definitions?word=${word}`);
-    console.log(foundWord)
+    let foundWordText = await foundWord.text()
+    console.log(foundWordText);
 }
 
 const submit = () =>
