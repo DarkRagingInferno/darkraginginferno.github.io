@@ -91,9 +91,10 @@ body{
 #def-response {
     display: flex;
     flex-direction: column;
+    justify-content: start;
 }
 
-#term, #definition {
+/* #term, #definition {
     display: flex;
-    just
-}
+    justify-content: start;
+} */
