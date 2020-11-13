@@ -107,4 +107,6 @@ body{
 
 #definition {
     font-size: 18px;
+    max-height: 100px;
+    overflow: scroll;
 }
