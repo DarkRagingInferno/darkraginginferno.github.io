@@ -58,3 +58,4 @@ const goToSearch = () => {
     window.location.href="https://darkraginginferno.github.io/COMP4537/labs/5/dictionary/search.html"
     // window.location.href="../../COMP4537/labs/5/dictionary/search.html"
 }
+// 
