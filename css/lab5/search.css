@@ -34,23 +34,26 @@ body{
     padding-bottom: 15px;
 }
 
-.title {
+.title, subtitle {
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
+}
+
+.title {
     font-weight: bold;
     font-size: 50px;
 }
 
 .subtitle {
-    color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: italic;
     font-size: 22px;
     margin-bottom: 5px;
 }
 
-#searchbar, .search-text-area, .icon, .search-text-area > input {
+#searchbar, 
+.search-text-area, 
+.icon, 
+.search-text-area > input {
     background-color: white;
     height: 35px;
     border-radius: 8px;
@@ -84,8 +87,3 @@ body{
     margin-top: 10px;
     border-radius: 8px;
 }
-
-
-
-
-
