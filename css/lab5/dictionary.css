@@ -1,0 +1,45 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/img/lab5/dictionaryIMG.jpg');
+    filter: opacity(7);
+    width: 100%;
+    height: 100%;
+}
+
+#inner-container{
+    background: rgba(255, 255, 255, 0.75);
+    border-radius: 8px;
+    width: max-content;
+    height: max-content
+}  
+
+.form-child{
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+.word-input{
+    margin-bottom: 8px;
+}
+
+.top-container{
+    text-align: center;
+}
+
+.title {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+}

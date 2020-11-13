@@ -1,0 +1,80 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/img/lab5/search.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: opacity(7);
+    width: 100%;
+    height: 100%;
+}
+
+#searchbar {
+    display: flex;
+}
+
+#inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: rgba(80, 80, 80, 0.4);
+    border-radius: 8px;
+    width: 350px;
+
+    padding-bottom: 15px;
+}
+
+.title {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.subtitle {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+#searchbar, .search-text-area, .icon, .search-text-area > input {
+    background-color: white;
+    height: 35px;
+    border-radius: 8px;
+}
+
+.icon {
+    background-image: url('../../assets/img/lab5/magnifying.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    width: 35px;
+    margin-right: 5px;
+}
+
+.search-text-area {
+    width: 200px;
+    height: 35px;
+}
+
+.search-text-area > input {
+    border: 0;
+    outline: none;
+    width: 95%;
+    height: 32px;
+    margin-left: 2px;
+ }
+
+
