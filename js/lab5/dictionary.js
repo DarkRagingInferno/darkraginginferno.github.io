@@ -32,7 +32,7 @@ const getWord = (word) =>
     console.log('Entering GET WORD')
     let foundWord = null
     fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`)
-    .then(res => foundWord = res)
+    .then(res => JSON.parse(res))
     .then(data => console.log(data));
     console.log(foundWord)
 }
