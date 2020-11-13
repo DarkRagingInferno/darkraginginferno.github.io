@@ -5,6 +5,7 @@ window.onload = () => {
 
 const createEntry = (word, def) => 
 {
+    console.log('Entering CREATE ENTRY')
     let req = fetch('https://dictionary-jvbp.herokuapp.com/api/definition/new-word',
     {
         method: 'POST',
@@ -28,12 +29,14 @@ const createEntry = (word, def) =>
 
 const getWord = (word) =>
 {
+    console.log('Entering GET WORD')
     let foundWord = fetch(`https://dictionary-jvbp.herokuapp.com/api/definition?word=${word}`);
     console.log(foundWord)
 }
 
 const submit = () =>
 {
+    console.log('Submitting SEARCH WORD')
    let query =  document.getElementById('search-word').value
    getWord(query)
 }
