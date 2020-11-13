@@ -29,7 +29,7 @@ const getWord = (word) =>
 
 const submit = () =>
 {
-   let word =  document.getElementById('search-word').value
-   getWord(word)
+   let query =  document.getElementById('search-word').value
+   getWord(query)
 }
 
