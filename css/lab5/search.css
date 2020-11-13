@@ -87,3 +87,9 @@ body{
     margin-top: 10px;
     border-radius: 8px;
 }
+
+#def-response {
+    display: flex;
+    flex-direction: column;
+}
+
