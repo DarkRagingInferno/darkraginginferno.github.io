@@ -28,8 +28,16 @@ const createEntry = (word, def) =>
             "definition": def
         })
     })
-    .then(response => response.json())
-    .then(data => console.log(data))
+    .then(response => {
+        if(response.status() == 200)
+        {
+            alert("Code: 200: SUCCESS!");
+        }
+        else
+        {
+            alert(response.status, ": FAIL");
+        }
+    })
     .catch(err => console.error('Error', err))
     
     return req;
