@@ -12,7 +12,7 @@ const createEntry = (word, def) =>
             alert("Please Enter A Word");
             return;
         }
-   
+    alert("about to enter fetch");
 
     fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
     {
@@ -29,6 +29,7 @@ const createEntry = (word, def) =>
         })
     })
     .then(response => {
+        alert("inside the fetch");
         if(response.status() == 200)
         {
             alert("Code: 200: SUCCESS!");
@@ -39,6 +40,9 @@ const createEntry = (word, def) =>
         }
     })
     .catch(err => console.error('Error', err))
+
+    alert("exitting fetch");
+
     
     return req;
 }
