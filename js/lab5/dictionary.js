@@ -10,17 +10,18 @@ const createEntry = () =>
             alert("Please Enter A Word and A Definition Without Any Numbers or Symbols");
             return;
         }
+
     fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
     {
         method: 'POST',
         headers: 
         {
             "Accept": "application/json",
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(
         {
-            "word": is_word,
+            "word": myWord,
             "definition": def
         })
     })
