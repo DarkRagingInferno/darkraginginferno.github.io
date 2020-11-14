@@ -51,7 +51,7 @@ const createEntry = (this, word, def) =>
 const getWord = async (word) =>
 {
     console.log('Entering GET WORD')
-    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definitions?word=${word}`)
+    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definitions?word=${word}`).catch(err => console.log(err))
     console.log(foundWord)
     let foundWordText = await foundWord.json()
     console.log(foundWordText)
