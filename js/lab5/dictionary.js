@@ -14,7 +14,7 @@ const createEntry = (word, def) =>
         }
    
 
-    let req = fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
+    fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
     {
         method: 'POST',
         headers: 
