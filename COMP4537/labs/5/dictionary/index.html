@@ -16,7 +16,7 @@
                     <span class='title' class='form-child'>Enter it for us!</span><br><br>
                 </div>
 
-                <form onsubmit='createEntry(this.word.value, this.definition.value)' id='dict-form'>
+                <form onsubmit='return createEntry(this, this.word.value, this.definition.value)' id='dict-form'>
                     <label class='form-child' for='word'>New Word:</label>
                     <input class='word-input' type='text' id='word' name='word' placeholder="New word here..."><br>
                     <label class='form-child text-area-label' for='definition'>New Definition:</label><br>

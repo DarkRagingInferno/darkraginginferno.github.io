@@ -5,6 +5,7 @@
 
 const createEntry = (word, def) => 
 {
+    this.preventDefault();
     let myWord  = word.trim() 
     let is_word = Array.from(myWord).reduce((acc, char) => acc && (char.toUpperCase() != char.toLowerCase()), true);
     if(!is_word)
