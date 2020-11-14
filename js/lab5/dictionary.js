@@ -5,9 +5,15 @@
 
 const createEntry = (word, def) => 
 {
-    console.log('Entering CREATE ENTRY');
-    console.log(word, def);
-    
+    let myWord  = word.trim() 
+    let is_word = Array.from(myWord).reduce((acc, char) => acc && (char.toUpperCase() != char.toLowerCase()), true);
+    if(!is_word)
+        {
+            alert("Please Enter A Word");
+            return;
+        }
+   
+
     let req = fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
     {
         method: 'POST',
@@ -18,7 +24,7 @@ const createEntry = (word, def) =>
         },
         body: JSON.stringify(
         {
-            "word": word,
+            "word": is_word,
             "definition": def
         })
     })
@@ -40,8 +46,9 @@ const getWord = async (word) =>
 
 const submit = () =>
 {
-    console.log('Submitting SEARCH WORD');
-   let query =  document.getElementById('search-word').value;
+console.log('Submitting SEARCH WORD');
+    let query =  document.getElementById('search-word').value;
+   
    getWord(query);
 }
 
