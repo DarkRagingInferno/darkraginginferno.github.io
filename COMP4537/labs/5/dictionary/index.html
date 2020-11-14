@@ -16,12 +16,12 @@
                     <span class='title' class='form-child'>Enter it for us!</span><br><br>
                 </div>
 
-                <form onsubmit='return createEntry(this, this.word.value, this.definition.value)' id='dict-form'>
+                <form id='dict-form'>
                     <label class='form-child' for='word'>New Word:</label>
                     <input class='word-input' type='text' id='word' name='word' placeholder="New word here..."><br>
                     <label class='form-child text-area-label' for='definition'>New Definition:</label><br>
                     <textarea id='definition' class='form-child' rows='4' cols='70' name='definition' placeholder="Enter definition here..."></textarea><br>
-                    <input id='submit' type='submit' class='form-child' value='Submit'>
+                    <input id='submit' onclick="createEntry()" type='button' class='form-child' value='Submit'>
                 </form>
             </div>
                 <button onclick="goToSearch()" value="Search">Search</button>
