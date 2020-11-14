@@ -46,18 +46,20 @@ const createEntry = (word, def) =>
 const getWord = async (word) =>
 {
     console.log('Entering GET WORD')
-    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definitions?word=${word}`);
-    let foundWordText = await foundWord.json();
+    let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definitions?word=${word}`)
+    console.log(foundWord)
+    let foundWordText = await foundWord.json()
+    console.log(foundWordText)
     appendDef(word, foundWordText);
     
 }
 
 const submit = () =>
 {
-console.log('Submitting SEARCH WORD');
+    console.log('Submitting SEARCH WORD');
     let query =  document.getElementById('search-word').value;
    
-   getWord(query);
+   getWord(query);  
 }
 
 const goToIndex = () => {
