@@ -3,7 +3,7 @@
 // }
 
 
-const createEntry = (this, word, def) => 
+const createEntry = (word, def) => 
 {
     this.preventDefault();
     let myWord  = word.trim() 
