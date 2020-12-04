@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
 	<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+	<link href="../css/documentation.css" rel="stylesheet">
 </head>
 <body>
 	<div class='container'>
@@ -27,40 +28,119 @@
 		<span>https://pokeapi-amar-john.herokuapp.com/api/v1</span>
 		<p>In order to use this <span>API</span> you must sign up and create a trainer in order to use this service.</p>
 		<p>Afterwords, simply just login</p>
-
-		<span class='get'>GET</span>
-		<p class='endpoint'>/login</p>
-		<p class='endpoint-description'>Login to your Trainer</p>
+		<section id='user-section'>
+			<div class='endpoint-container'>
+				<h2>Auth User</h2>
+				<table>
+					<colgroup>
+						<col width="30%">
+						<col width="70%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Endpoint</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='get http-type'>GET</span>
+								<p class='endpoint'>/login</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Login to your Trainer</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>	
+			</div>
+		</section>
 		
 		<section id='pokemon-section'>
-			<div id='pokemon-description'>
+			<div id='pokemon-endpoints'>
 				<h1>Pokemon</h1>
 				<p><span>Pokemon</span> are creatures of all shapes and sizes who live in the wild or alongside humans</p>
-			</div>>
-			<div id='pokemon-endpoints'>
 				<h2>Pokemon Endpoints</h2>
-				<div class='endpoint-container'>
-					<span class='get'>GET</span>
-					<p class='endpoint'>/pokemon</p>
-					<p class='endpoint-description'>Gets a Pokemon</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='put'>PUT</span>
-					<p class='endpoint'>/pokemon/update</p>
-					<p class='endpoint-description'>Updates a pokemon's properties such as [name, hp, attack, generation, etc...]</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='delete'>DELETE</span>
-					<p class='endpoint'>/pokemon/delete</p>
-					<p class='endpoint-description'>Deletes a pokemon</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='post'>POST</span>
-					<p class='endpoint'>/pokemon/create</p>
-					<p class='endpoint-description'>Creates a new pokemon</p>
+				<div id='pokemon-description'>
+					<table>
+						<colgroup>
+							<col width="30%">
+							<col width="70%">
+						</colgroup>
+						<thead>
+							<tr>
+								<th>Endpoint</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='get http-type'>GET</span>
+									<p class='endpoint'>/pokemon</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Gets a Pokemon</p>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='put http-type'>PUT</span>
+									<p class='endpoint'>/pokemon/update</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Updates a pokemon's properties such as [name, hp, attack, generation, etc...]</p>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='delete http-type'>DEL</span>
+									<p class='endpoint'>/pokemon/delete</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Deletes a pokemon</p>
+								</td>
+							</tr>
+							<tr>
+								<td class='td-endpoint'>
+									<span class='post http-type'>POST</span>
+									<p class='endpoint'>/pokemon/create</p>
+								</td>
+								<td>
+									<p class='endpoint-description'>Creates a new pokemon</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
-			<div id='pokemon-Request'></div>>
+			<div id='pokemon-Request'>
+				<div class='code-block'>
+<pre>
+	<code>
+<HTML><span class='red'>Example Pokemon</span></HTML>
+{
+	<HTML><span class='lightblue'>"</span><span class="purple">pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='orange'>1</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">name</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Bulbasaur</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">type1</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Grass</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">type2</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Poison</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">total</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>318</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">hp</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>45</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">attack</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>49</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">defense</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>49</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">spec_atk</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>65</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">spec_def</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>65</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">speed</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>45</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">generation</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>1</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">legendary</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">image</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>https://firebasestorage.googleapis.com/v0/b/pokemonapi-5ae54.appspot.com/o/1.jpg?alt=media&token=3766614b-db92-4265-97eb-529a778</span><span class="lightblue">"</span>
+} 
+		
+	</code>
+</pre>
+				</div>
+			</div>
 			<div id='pokemon-Response'></div>
 		</section>
 		<section id='trainer-section'>
@@ -70,34 +150,88 @@
 			</div>
 			<div id='trainer-endpoints'>
 				<h2>Trainer Endpoints</h2>
-				<div class='endpoint-container'>
-					<span class='get'>GET</span>
-					<p class='endpoint'>/trainer</p>
-					<p class='endpoint-description'>Gets a Trainer</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='put'>PUT</span>
-					<p class='endpoint'>/trainer/update</p>
-					<p class='endpoint-description'>Updates a Trainer's information  [first name, last name, etc...]</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='delete'>DELETE</span>
-					<p class='endpoint'>/trainer/delete</p>
-					<p class='endpoint-description'>Deletes a Trainer</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='post'>POST</span>
-					<p class='endpoint'>/trainer/create</p>
-					<p class='endpoint-description'>Creates a new Trainer</p>
-				<div class='endpoint-container'>
-					<span class='post'>POST</span>
-					<p class='endpoint'>/trainer/image</p>
-					<p class='endpoint-description'>Posts an image to a Trainer</p>
+				<table>
+					<colgroup>
+						<col width="30%">
+						<col width="70%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Endpoint</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='get http-type'>GET</span>
+								<p class='endpoint'>/trainer</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Gets a Trainer</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='put http-type'>PUT</span>
+								<p class='endpoint'>/trainer/update</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Updates a Trainer's information  [first name, last name, etc...]</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='delete http-type'>DEL</span>
+								<p class='endpoint'>/trainer/delete</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Deletes a Trainer</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='post http-type'>POST</span>
+								<p class='endpoint'>/trainer/create</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Creates a new Trainer</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='post http-type'>POST</span>
+								<p class='endpoint'>/trainer/image</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Posts an image to a Trainer</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id='trainer-Request'>
+				<div class='code-block'>
+<pre>
+	<code>
+<HTML><span class='red'>Example Trainer</span></HTML>
+{
+	<HTML><span class='lightblue'>"</span><span class="purple">trainerId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>200</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">firsttName</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>soos</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">lastName</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>kida</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">password</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>password</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">email</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>sookida@sookida.com</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">userName</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Sookida</span><span class="lightblue">"</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">party_partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>500</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>"</span><span class="purple">trainer_image</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>https://firebasestorage.googleapis.com/v0/b/pokemonapi-5ae54.appspot.com/o/1.jpg?alt=media&token=3766614b-db92-4265-97eb-529a778</span><span class="lightblue">"</span>
+} 		
+	</code>
+</pre>
 				</div>
 			</div>
-			<div id='trainer-Request'></div>
 			<div id='trainer-Response'></div>
 		</section>
+
 		<section id='party-section'>
 			<div id='party-description'>
 				<h1>Party</h1>
@@ -105,34 +239,79 @@
 			</div>
 			<div id='party-endpoints'>
 				<h2>Party Endpoints</h2>
-				<div class='endpoint-container'>
-					<span class='get'>GET</span>
-					<p class='endpoint'>/party</p>
-					<p class='endpoint-description'>Gets a party</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='get'>GET</span>
-					<p class='endpoint'>/party/id</p>
-					<p class='endpoint-description'>Gets a party id</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='put'>PUT</span>
-					<p class='endpoint'>/party/add</p>
-					<p class='endpoint-description'> Adds a pokemon to a party</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='delete'>DELETE</span>
-					<p class='endpoint'>/party/delete</p>
-					<p class='endpoint-description'>Deletes a Pokemon from a party</p>
-				</div>
-				<div class='endpoint-container'>
-					<span class='post'>POST</span>
-					<p class='endpoint'>/party/create</p>
-					<p class='endpoint-description'>Creates a new party</p>
+				<table>
+					<colgroup>
+						<col width="30%">
+						<col width="70%">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>Endpoint</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='get http-type'>GET</span>
+								<p class='endpoint'>/party</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Gets a party</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='get http-type'>GET</span>
+								<p class='endpoint'>/party/id</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Gets a party id</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='put http-type'>PUT</span>
+								<p class='endpoint'>/party/add</p>
+							</td>
+							<td>
+								<p class='endpoint-description'> Adds a pokemon to a party</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='delete http-type'>DEL</span>
+								<p class='endpoint'>/party/delete</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Deletes a Pokemon from a party</p>
+							</td>
+						</tr>
+						<tr>
+							<td class='td-endpoint'>
+								<span class='post http-type'>POST</span>
+								<p class='endpoint'>/party/create</p>
+							</td>
+							<td>
+								<p class='endpoint-description'>Creates a new party</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div id='party-Request'>
+				<div class='code-block'>
+<pre>
+	<code>
+<HTML><span class='red'>Example Trainer</span></HTML>
+{
+	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>500</span><span class='blue'>,</span>
+} 		
+	</code>
+</pre>
 				</div>
 			</div>
-			<div id='party-Request'></div>
-			<div id='party-Response'></div>>
+			<div id='party-Response'></div>
 		</section>
 	</div>
 </body>

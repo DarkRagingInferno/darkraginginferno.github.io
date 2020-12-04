@@ -1,0 +1,82 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+span,
+.endpoint {
+    color: #4064AC;
+}
+
+span:hover {
+    color: #1773EA;
+}
+
+.endpoint-container{
+    display: flex;
+    flex-direction:column;
+}
+.td-endpoint{
+    display: flex;
+    flex-direction:row;
+}
+
+.http-type{
+    height: 35px;
+    width: 40px;
+}
+
+.endpoint-container > child {
+    margin-right: 5px;
+}
+
+.get,
+.post,
+.put,
+.delete {
+    color: white;
+    border-radius: 5px;
+}
+
+.get {
+    background-color: green;
+}
+.delete {
+    background-color: #680000;
+}
+.put {
+    background-color: #6363F7;
+}
+.post {
+    background-color: #604771;
+}
+
+
+pre code {  
+    background-color: #292B36;
+    border: 1px solid #999;
+    display: block;
+    padding: 20px;
+    border-radius: 4px;
+    color: white;
+}
+
+.red {
+    color: red;
+}
+
+.purple {
+    color: #B180DA;
+}
+
+.green {
+    color: #CDF76D;
+}
+
+.orange{
+    color: #F07D24;
+}
+
+.lightblue {
+    color: #ABF7F7;
+}

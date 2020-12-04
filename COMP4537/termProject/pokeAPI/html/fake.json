@@ -1,0 +1,16 @@
+{
+    "pokeNo": "1",
+    "name": "Bulbasaur",
+    "type1": "Grass",
+    "type2": "Poison",
+    "total": 318,
+    "hp": 45,
+    "attack": 49,
+    "defense": 49,
+    "spec_atk": 65,
+    "spec_def": 65,
+    "speed": 45,
+    "generation": 1,
+    "legendary": 0,
+    "image": "https://firebasestorage.googleapis.com/v0/b/pokemonapi-5ae54.appspot.com/o/1.jpg?alt=media&token=3766614b-db92-4265-97eb-529a778"
+}
