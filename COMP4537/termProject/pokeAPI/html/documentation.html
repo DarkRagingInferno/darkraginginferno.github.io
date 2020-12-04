@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Pokemon API</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="keywords" content="Pokemon API, Pokemon, Poke">
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
+	<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
+</head>
+<body>
+	<div class='container'>
+		<p><span>poke-amar-john</span> is a web api that tries to capture a bit of the magic of pokemon we all know and love.</p>
+		<span>https://pokeapi-amar-john.herokuapp.com/api/v1</span>
+		<p>In order to use this <span>API</span> you must sign up and create a trainer in order to use this service.</p>
+		<p>Afterwords, simply just login</p>
+
+		<span class='get'>GET</span>
+		<p class='endpoint'>/login</p>
+		<p class='endpoint-description'>Login to your Trainer</p>
+		
+		<section id='pokemon-section'>
+			<div id='pokemon-description'>
+				<h1>Pokemon</h1>
+				<p><span>Pokemon</span> are creatures of all shapes and sizes who live in the wild or alongside humans</p>
+			</div>>
+			<div id='pokemon-endpoints'>
+				<h2>Pokemon Endpoints</h2>
+				<div class='endpoint-container'>
+					<span class='get'>GET</span>
+					<p class='endpoint'>/pokemon</p>
+					<p class='endpoint-description'>Gets a Pokemon</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='put'>PUT</span>
+					<p class='endpoint'>/pokemon/update</p>
+					<p class='endpoint-description'>Updates a pokemon's properties such as [name, hp, attack, generation, etc...]</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='delete'>DELETE</span>
+					<p class='endpoint'>/pokemon/delete</p>
+					<p class='endpoint-description'>Deletes a pokemon</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='post'>POST</span>
+					<p class='endpoint'>/pokemon/create</p>
+					<p class='endpoint-description'>Creates a new pokemon</p>
+				</div>
+			</div>
+			<div id='pokemon-Request'></div>>
+			<div id='pokemon-Response'></div>
+		</section>
+		<section id='trainer-section'>
+			<div id='trainer-description'>
+				<h1>Trainers</h1>
+				<p><span>Trainers</span> is a person who catches, trains, cares for, and battles with Pokémon. The majority of people within the known Pokémon world are Trainers</p>
+			</div>
+			<div id='trainer-endpoints'>
+				<h2>Trainer Endpoints</h2>
+				<div class='endpoint-container'>
+					<span class='get'>GET</span>
+					<p class='endpoint'>/trainer</p>
+					<p class='endpoint-description'>Gets a Trainer</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='put'>PUT</span>
+					<p class='endpoint'>/trainer/update</p>
+					<p class='endpoint-description'>Updates a Trainer's information  [first name, last name, etc...]</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='delete'>DELETE</span>
+					<p class='endpoint'>/trainer/delete</p>
+					<p class='endpoint-description'>Deletes a Trainer</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='post'>POST</span>
+					<p class='endpoint'>/trainer/create</p>
+					<p class='endpoint-description'>Creates a new Trainer</p>
+				<div class='endpoint-container'>
+					<span class='post'>POST</span>
+					<p class='endpoint'>/trainer/image</p>
+					<p class='endpoint-description'>Posts an image to a Trainer</p>
+				</div>
+			</div>
+			<div id='trainer-Request'></div>
+			<div id='trainer-Response'></div>
+		</section>
+		<section id='party-section'>
+			<div id='party-description'>
+				<h1>Party</h1>
+				<p><span>Parties</span> consists of up to 6 pokemon a Trainer brings on their journey.</p>
+			</div>
+			<div id='party-endpoints'>
+				<h2>Party Endpoints</h2>
+				<div class='endpoint-container'>
+					<span class='get'>GET</span>
+					<p class='endpoint'>/party</p>
+					<p class='endpoint-description'>Gets a party</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='get'>GET</span>
+					<p class='endpoint'>/party/id</p>
+					<p class='endpoint-description'>Gets a party id</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='put'>PUT</span>
+					<p class='endpoint'>/party/add</p>
+					<p class='endpoint-description'> Adds a pokemon to a party</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='delete'>DELETE</span>
+					<p class='endpoint'>/party/delete</p>
+					<p class='endpoint-description'>Deletes a Pokemon from a party</p>
+				</div>
+				<div class='endpoint-container'>
+					<span class='post'>POST</span>
+					<p class='endpoint'>/party/create</p>
+					<p class='endpoint-description'>Creates a new party</p>
+				</div>
+			</div>
+			<div id='party-Request'></div>
+			<div id='party-Response'></div>>
+		</section>
+	</div>
+</body>
+</html>

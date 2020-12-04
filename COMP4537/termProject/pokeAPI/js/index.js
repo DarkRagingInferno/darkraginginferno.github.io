@@ -1,3 +1,4 @@
+// https://pokeapi-amar-john.herokuapp.com/
 
 const getStartedOnClick = (username, password) => 
 {
@@ -6,7 +7,7 @@ const getStartedOnClick = (username, password) =>
 
 const authfetch = (username, password) => 
 {
-    let user = fetch("https://memory-game-jvbp.herokuapp.com/get-scores", 
+    let user = fetch("https://pokeapi-amar-john.herokuapp.com/login", 
         {
             method: 'POST',
             headers: 
@@ -16,7 +17,7 @@ const authfetch = (username, password) =>
             },
             body: JSON.stringify(
             {
-                "username": name,
+                "email": name,
                 "score": userScore.toString()
             })
         })
