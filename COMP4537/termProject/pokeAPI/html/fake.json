@@ -14,3 +14,28 @@
     "legendary": 0,
     "image": "https://firebasestorage.googleapis.com/v0/b/pokemonapi-5ae54.appspot.com/o/1.jpg?alt=media&token=3766614b-db92-4265-97eb-529a778"
 }
+
+{
+    "trainer": [
+        {
+            "message": "Successfully UPDATED Graveler."
+        }
+    ]
+}
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0cmFpbmVySWQiOjgyLCJpYXQiOjE2MDcwNzE1MTR9.2Z-IGty0LSvMxwjnssxQKIQwkPTPV-f_TL3RvdqGitY"
+}
+
+{
+    "trainer": {
+        "trainerId": 82,
+        "firstName": "soos",
+        "lastName": "kida",
+        "password": "password",
+        "email": "sookida@sookida.com",
+        "username": "sookida",
+        "party_partyId": 21,
+        "trainer_image": null
+    }
+}
