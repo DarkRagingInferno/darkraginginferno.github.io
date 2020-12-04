@@ -1,19 +1,15 @@
-// window.onload = () => {
-//     console.log('RELOADED')
-// }
 
-
-const createEntry = (word, def) => 
+const createEntry = () => 
 {
-    this.preventDefault();
+    let word = document.getElementById("word").value
+    let def = document.getElementById("definition").value;
     let myWord  = word.trim() 
     let is_word = Array.from(myWord).reduce((acc, char) => acc && (char.toUpperCase() != char.toLowerCase()), true);
-    if(!is_word)
+    if(!is_word || word.length < 1 || def.length < 1)
         {
-            alert("Please Enter A Word");
+            alert("Please Enter A Word and A Definition Without Any Numbers or Symbols");
             return;
         }
-    alert("about to enter fetch");
 
     fetch('https://dictionary-jvbp.herokuapp.com/api/definitions/new-word',
     {
@@ -21,19 +17,19 @@ const createEntry = (word, def) =>
         headers: 
         {
             "Accept": "application/json",
-            "Content-Type": "application/json",
+            "Content-Type": "application/json"
         },
         body: JSON.stringify(
         {
-            "word": is_word,
+            "word": myWord,
             "definition": def
         })
     })
     .then(response => {
-        alert("inside the fetch");
-        if(response.status() == 200)
+        console.log(response)
+        if(response.status == 200)
         {
-            alert("Code: 200: SUCCESS!");
+            alert("Code: 200: SUCCESS!!!");
         }
         else
         {
@@ -41,21 +37,19 @@ const createEntry = (word, def) =>
         }
     })
     .catch(err => console.error('Error', err))
-
-    alert("exitting fetch");
-
-    
-    return req;
 }
 
 const getWord = async (word) =>
 {
-    console.log('Entering GET WORD')
     let foundWord = await fetch(`https://dictionary-jvbp.herokuapp.com/api/definitions?word=${word}`).catch(err => console.log(err))
-    console.log(foundWord)
-    let foundWordText = await foundWord.json()
-    console.log(foundWordText)
-    appendDef(word, foundWordText);
+    if(foundWord.status == 200){
+        let foundWordText = await foundWord.json()
+        appendDef(word, foundWordText);
+    }
+    else {
+        appendError(word)
+    }
+    
     
 }
 
@@ -63,8 +57,14 @@ const submit = () =>
 {
     console.log('Submitting SEARCH WORD');
     let query =  document.getElementById('search-word').value;
+    if (query.length > 0) {
+        getWord(query);
+    }
+    else {
+        alert("Please Enter a Word!")
+    }
    
-   getWord(query);  
+     
 }
 
 const goToIndex = () => {
@@ -85,6 +85,14 @@ const appendDef = (word, jObj) => {
 
     termDiv.innerHTML = word;
     defDiv.innerHTML = jObj['k'];
-    console.log(jObj)
+
+}
+
+const appendError = (word) => {
+
+    let termDiv = document.getElementById('term');
+    let defDiv  = document.getElementById('definition');
+    termDiv.innerHTML = word;
+    defDiv.innerHTML = "No such word found";
 
 }
