@@ -345,6 +345,12 @@ The following is a sample response from the <HTML><span class='red'>/trainer/del
 			<HTML><span class='lightblue'>"</span><span class="yellow">message</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Successfully deleted trainer.</span><span class="lightblue">"</span>
 		<HTML><span class='lightblue'>}</span></HTML>	
 <HTML><span class='lightblue'>}</span></HTML>
+
+
+The following is a sample response from the <HTML><span class='red'>/trainer/createa</span></HTML> endpoint:
+<HTML><span class='lightblue'>{</span></HTML>
+	<HTML><span class='lightblue'>"</span><span class="purple">token</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>oi[opiautaopweieutaoyu099awtybaw0teu9v...</span><span class="lightblue">"</span>
+<HTML><span class='lightblue'>}</span></HTML> 
 	</code>
 </pre>
 				</div>
@@ -426,7 +432,70 @@ The following is a sample response from the <HTML><span class='red'>/trainer/del
 <HTML><span class='red'>Example Party</span></HTML>
 <HTML><span class='lightblue'>{</span></HTML>
 	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>500
-<HTML><span class='lightblue'>}</span></HTML>  		
+<HTML><span class='lightblue'>}</span></HTML>  	
+
+
+The following is a sample response from the <HTML><span class='red'>/party</span></HTML> endpoint:
+<HTML><span class='lightblue'>[</span></HTML>
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82
+	<HTML><span class='lightblue'>}</span></HTML> <span class='blue'>,</span> 		
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138
+	<HTML><span class='lightblue'>}</span></HTML>  		
+<HTML><span class='lightblue'>]</span></HTML>  		
+
+
+The following is a sample response from the <HTML><span class='red'>/party/id</span></HTML> endpoint:
+<HTML><span class='lightblue'>{</span></HTML>
+	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>21
+<HTML><span class='lightblue'>}</span></HTML> 
+
+
+The following is a sample response from the <HTML><span class='red'>/party/add</span></HTML> endpoint:
+<HTML><span class='lightblue'>[</span></HTML>
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82
+	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82
+	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 	
+	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138
+	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 	
+<HTML><span class='lightblue'>]</span></HTML>  	
+
+
+The following is a sample response from the <HTML><span class='red'>/party/delete</span></HTML> endpoint:
+<HTML><span class='lightblue'>[</span></HTML>
+	<HTML><span class='lightblue'>[</span></HTML>
+		<HTML><span class='lightblue'>{</span></HTML>
+			<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>47
+		<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
+		<HTML><span class='lightblue'>{</span></HTML>
+			<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138
+		<HTML><span class='lightblue'>{</span></HTML>
+	
+	
+		<HTML><span class='lightblue'>]</span></HTML>
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">fieldCount</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">affectedRows</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">insertId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">serverStatus</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>2</span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">warningCount</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">message</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'></span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">protocol41</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>true</span><span class='blue'>,</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">changedRows</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
+	<HTML><span class='lightblue'>}</span></HTML>  		
+<HTML><span class='lightblue'>]</span>
+
+
+The following is a sample response from the <HTML><span class='red'>/party/create</span></HTML> endpoint:
+<HTML><span class='lightblue'>{</span></HTML>
+	<HTML><span class='lightblue'>"</span><span class="purple">token</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>oi[opiautaopweieutaoyu099awtybaw0teu9v...</span><span class="lightblue">"</span>
+<HTML><span class='lightblue'>}</span></HTML> 
 	</code>
 </pre>
 				</div>

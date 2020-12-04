@@ -39,3 +39,30 @@
         "trainer_image": null
     }
 }
+
+[
+    {
+        "pokemon_pokeNo": 82
+    }
+]
+
+[
+    [
+        {
+            "pokemon_pokeNo": 47
+        },
+        {
+            "pokemon_pokeNo": 138
+        }
+    ],
+    {
+        "fieldCount": 0,
+        "affectedRows": 0,
+        "insertId": 0,
+        "serverStatus": 2,
+        "warningCount": 0,
+        "message": "",
+        "protocol41": true,
+        "changedRows": 0
+    }
+]
