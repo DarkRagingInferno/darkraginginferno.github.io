@@ -1,6 +1,18 @@
+
 .container{
     display: flex;
     flex-direction: column;
+}
+
+#title {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+
+.head-table, .head-table, tr, th, td {
+    text-align: center;
 }
 
 span,
@@ -51,6 +63,31 @@ span:hover {
     background-color: #604771;
 }
 
+table, tr, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th{
+    background-color: #f2f2f2;
+    font-weight: bolder;
+    font-size: 24px;
+}
+tr:nth-child(even){background-color: #f2f2f2;}
+
+.td-endpoint {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+}
+
+.endpoint{
+    margin-left: 5px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
 
 pre code {  
     background-color: #292B36;
@@ -59,6 +96,32 @@ pre code {
     padding: 20px;
     border-radius: 4px;
     color: white;
+}
+
+p {
+    font-size: 22px;
+}
+.p-description {
+    margin-top:10px;
+    margin-bottom: 10px;
+    font-size: 26px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bolder;
+    margin-top: 30px;
+    
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bolder;
+    margin-top: 30px;
+}
+
+.api-string{
+    font-size: 30px;
 }
 
 .red {

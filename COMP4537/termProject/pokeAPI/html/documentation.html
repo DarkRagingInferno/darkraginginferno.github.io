@@ -16,7 +16,7 @@
             window.scrollTo(0, 1);
         }
     </script>
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
+    <link rel="stylesheet" href="../css/style.css" type="text/css" media="all">
     <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css" media="all">
 	<link href="//fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i" rel="stylesheet">
 	<link href="//fonts.googleapis.com/css?family=Mukta:200,300,400,500,600,700,800" rel="stylesheet">
@@ -24,10 +24,31 @@
 </head>
 <body>
 	<div class='container'>
-		<p><span>poke-amar-john</span> is a web api that tries to capture a bit of the magic of pokemon we all know and love.</p>
-		<span>https://pokeapi-amar-john.herokuapp.com/api/v1</span>
-		<p>In order to use this <span>API</span> you must sign up and create a trainer in order to use this service.</p>
-		<p>Afterwords, simply just login</p>
+		<div id='title'><img src='../images/pokeapi.png'/></div>
+
+
+		<table class='head-table'>
+			<thead>
+				<tr>
+					<th><p><span>poke-amar-john</span> is a web api that tries to capture a bit of the magic of pokemon we all know and love.</p></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="api-string">
+						<span>https://pokeapi-amar-john.herokuapp.com/api/v1</span>	
+					</td>
+				</tr>
+				<tr>
+					<td><p class="p-description">In order to use this <span>API</span> you must sign up and create a trainer in order to use this service.</p></td>
+				</tr>
+				<tr>
+					<td><p>Afterwords, simply just login</p></td>				
+				</tr>
+			</tbody>
+		</table>
+		
+		
 		<section id='user-section'>
 			<div class='endpoint-container'>
 				<h2>Auth User</h2>
@@ -86,7 +107,7 @@ The following is a sample response from the <HTML><span class='red'>/login</span
 		<section id='pokemon-section'>
 			<div id='pokemon-endpoints'>
 				<h1>Pokemon</h1>
-				<p><span>Pokemon</span> are creatures of all shapes and sizes who live in the wild or alongside humans</p>
+				<p class="p-description"><span>Pokemon</span> are creatures of all shapes and sizes who live in the wild or alongside humans</p>
 				<h2>Pokemon Endpoints</h2>
 				<div id='pokemon-description'>
 					<table>
@@ -232,7 +253,7 @@ The following is a sample response from the <HTML><span class='red'>/pokemon/cre
 		<section id='trainer-section'>
 			<div id='trainer-description'>
 				<h1>Trainers</h1>
-				<p><span>Trainers</span> is a person who catches, trains, cares for, and battles with Pokémon. The majority of people within the known Pokémon world are Trainers</p>
+				<p class="p-description"><span>Trainers</span> is a person who catches, trains, cares for, and battles with Pokémon. The majority of people within the known Pokémon world are Trainers</p>
 			</div>
 			<div id='trainer-endpoints'>
 				<h2>Trainer Endpoints</h2>
@@ -361,7 +382,7 @@ The following is a sample response from the <HTML><span class='red'>/trainer/cre
 		<section id='party-section'>
 			<div id='party-description'>
 				<h1>Party</h1>
-				<p><span>Parties</span> consists of up to 6 pokemon a Trainer brings on their journey.</p>
+				<p class="p-description"><span>Parties</span> consists of up to 6 pokemon a Trainer brings on their journey.</p>
 			</div>
 			<div id='party-endpoints'>
 				<h2>Party Endpoints</h2>
