@@ -12,8 +12,6 @@ const authfetch = (email, password) =>
             {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
-                "email": email,
-                "password": password
             },
             body: JSON.stringify({
                 "email": email,
