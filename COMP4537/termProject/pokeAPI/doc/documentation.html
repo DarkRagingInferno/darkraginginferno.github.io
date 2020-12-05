@@ -24,32 +24,31 @@
 </head>
 <body>
 	<div class='container'>
-		<div id='title'><img src='../images/pokeapi.png'/></div>
+		<div id='top-section'>
+			<div id='title'><img src='../images/pokeapi.png'/></div>
 
-
-		<table class='head-table'>
-			<thead>
-				<tr>
-					<th><p><span>poke-amar-john</span> is a web api that tries to capture a bit of the magic of pokemon we all know and love.</p></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td class="api-string">
-						<span>https://pokeapi-amar-john.herokuapp.com/api/v1</span>	
-					</td>
-				</tr>
-				<tr>
-					<td><p class="p-description">In order to use this <span>API</span> you must sign up and create a trainer in order to use this service.</p></td>
-				</tr>
-				<tr>
-					<td><p>Afterwords, simply just login</p></td>				
-				</tr>
-			</tbody>
-		</table>
-		
-		
-		<section id='user-section'>
+			<table class='head-table'>
+				<thead>
+					<tr>
+						<th><p><span>poke-amar-john</span> is a web api that tries to capture a bit of the magic of pokemon we all know and love.</p></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="api-string">
+							<span>https://pokeapi-amar-john.herokuapp.com/api/v1</span>	
+						</td>
+					</tr>
+					<tr>
+						<td><p class="p-description">In order to use this <span>API</span> you must sign up and create a trainer in order to use this service.</p></td>
+					</tr>
+					<tr>
+						<td><p>Afterwords, simply just login</p></td>				
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div id='user-section'>
 			<div class='endpoint-container'>
 				<h2>Auth User</h2>
 				<table>
@@ -102,9 +101,9 @@ The following is a sample response from the <HTML><span class='red'>/login</span
 	</code>
 </pre>
 			</div>
-		</section>
+		</div>
 		
-		<section id='pokemon-section'>
+		<div id='pokemon-section'>
 			<div id='pokemon-endpoints'>
 				<h1>Pokemon</h1>
 				<p class="p-description"><span>Pokemon</span> are creatures of all shapes and sizes who live in the wild or alongside humans</p>
@@ -210,7 +209,7 @@ The following is a sample response from the <HTML><span class='red'>/pokemon</sp
 
 The following is a sample response from the <HTML><span class='red'>/pokemon/update</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:
+	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:</span>
 		<HTML><span class='lightblue'>{</span></HTML>
 			<HTML><span class='lightblue'>"</span><span class="yellow">message</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Successfully UPDATEAD Graveler.</span><span class="lightblue">"</span>
 		<HTML><span class='lightblue'>}</span></HTML>	
@@ -219,7 +218,7 @@ The following is a sample response from the <HTML><span class='red'>/pokemon/upd
 
 The following is a sample response from the <HTML><span class='red'>/pokemon/delete</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:
+	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:</span>
 		<HTML><span class='lightblue'>{</span></HTML>
 			<HTML><span class='lightblue'>"</span><span class="yellow">deletedPokemon</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Successfully DELETED No.152 pokemon.</span><span class="lightblue">"</span>
 		<HTML><span class='lightblue'>}</span></HTML>	
@@ -249,8 +248,8 @@ The following is a sample response from the <HTML><span class='red'>/pokemon/cre
 				</div>
 			</div>
 			<div id='pokemon-Response'></div>
-		</section>
-		<section id='trainer-section'>
+		</div>
+		<div id='trainer-section'>
 			<div id='trainer-description'>
 				<h1>Trainers</h1>
 				<p class="p-description"><span>Trainers</span> is a person who catches, trains, cares for, and battles with Pokémon. The majority of people within the known Pokémon world are Trainers</p>
@@ -336,7 +335,7 @@ The following is a sample response from the <HTML><span class='red'>/pokemon/cre
 
 The following is a sample response from the <HTML><span class='red'>/trainer</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:
+	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:</span>
 		<HTML><span class='lightblue'>{</span></HTML>
 			<HTML><span class='lightblue'>"</span><span class="purple">trainerId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>200</span><span class='blue'>,</span>
 <HTML><span class='lightblue'>"</span><span class="yellow">firsttName</span><span class="lightblue">"</span></HTML><span class='blue'>: </span><span class="lightblue">"</span><span class='green'>soos</span><span class="lightblue">"</span><span class='blue'>,</span>
@@ -345,14 +344,14 @@ The following is a sample response from the <HTML><span class='red'>/trainer</sp
 <HTML><span class='lightblue'>"</span><span class="yellow">email</span><span class="lightblue">"</span></HTML><span class='blue'>: </span> <span class="lightblue">"</span><span class='green'>sookida@sookida.com</span><span class="lightblue">"</span><span class='blue'>,</span>
 <HTML><span class='lightblue'>"</span><span class="yellow">userName</span><span class="lightblue">"</span></HTML><span class='blue'>: </span> <span class="lightblue">"</span><span class='green'>Sookida</span><span class="lightblue">"</span><span class='blue'>,</span>
 <HTML><span class='lightblue'>"</span><span class="yellow">party_partyId</span><span class="lightblue">"</span></HTML><span class='blue'>: </span><span class='orange'>500</span><span class='blue'>,</span>
-<HTML><span class='lightblue'>"</span><span class="yellow">trainer_image</span><span class="lightblue">"</span></HTML><span class='blue'>: <span class='orange'>500</span><span class='blue'></span>
+<HTML><span class='lightblue'>"</span><span class="yellow">trainer_image</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>500</span><span class='blue'></span>
 		<HTML><span class='lightblue'>}</span></HTML>	
 <HTML><span class='lightblue'>}</span></HTML>
 
 
 The following is a sample response from the <HTML><span class='red'>/trainer/update</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:
+	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:</span
 		<HTML><span class='lightblue'>{</span></HTML>
 			<HTML><span class='lightblue'>"</span><span class="yellow">message</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Successfully updated soos kida sookida@sookida.com.</span><span class="lightblue">"</span>
 		<HTML><span class='lightblue'>}</span></HTML>	
@@ -361,14 +360,14 @@ The following is a sample response from the <HTML><span class='red'>/trainer/upd
 
 The following is a sample response from the <HTML><span class='red'>/trainer/delete</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:
+	<HTML><span class='lightblue'>"</span><span class="purple">trainer</span><span class="lightblue">"</span></HTML><span class='blue'>:</span>
 		<HTML><span class='lightblue'>{</span></HTML>
 			<HTML><span class='lightblue'>"</span><span class="yellow">message</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>Successfully deleted trainer.</span><span class="lightblue">"</span>
 		<HTML><span class='lightblue'>}</span></HTML>	
 <HTML><span class='lightblue'>}</span></HTML>
 
 
-The following is a sample response from the <HTML><span class='red'>/trainer/createa</span></HTML> endpoint:
+The following is a sample response from the <HTML><span class='red'>/trainer/create</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
 	<HTML><span class='lightblue'>"</span><span class="purple">token</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class="lightblue">"</span><span class='green'>oi[opiautaopweieutaoyu099awtybaw0teu9v...</span><span class="lightblue">"</span>
 <HTML><span class='lightblue'>}</span></HTML> 
@@ -377,9 +376,9 @@ The following is a sample response from the <HTML><span class='red'>/trainer/cre
 				</div>
 			</div>
 			<div id='trainer-Response'></div>
-		</section>
+		</div>
 
-		<section id='party-section'>
+		<div id='party-section'>
 			<div id='party-description'>
 				<h1>Party</h1>
 				<p class="p-description"><span>Parties</span> consists of up to 6 pokemon a Trainer brings on their journey.</p>
@@ -452,65 +451,51 @@ The following is a sample response from the <HTML><span class='red'>/trainer/cre
 	<code>
 <HTML><span class='red'>Example Party</span></HTML>
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>500
+	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>500</span>
 <HTML><span class='lightblue'>}</span></HTML>  	
 
 
 The following is a sample response from the <HTML><span class='red'>/party</span></HTML> endpoint:
 <HTML><span class='lightblue'>[</span></HTML>
 	<HTML><span class='lightblue'>{</span></HTML>
-		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82
+		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82</span>
 	<HTML><span class='lightblue'>}</span></HTML> <span class='blue'>,</span> 		
 	<HTML><span class='lightblue'>{</span></HTML>
-		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138
+		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138</span>
 	<HTML><span class='lightblue'>}</span></HTML>  		
 <HTML><span class='lightblue'>]</span></HTML>  		
 
 
 The following is a sample response from the <HTML><span class='red'>/party/id</span></HTML> endpoint:
 <HTML><span class='lightblue'>{</span></HTML>
-	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>21
+	<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>21</span>
 <HTML><span class='lightblue'>}</span></HTML> 
 
 
 The following is a sample response from the <HTML><span class='red'>/party/add</span></HTML> endpoint:
 <HTML><span class='lightblue'>[</span></HTML>
 	<HTML><span class='lightblue'>{</span></HTML>
-		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82
+		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82</span>
 	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
 	<HTML><span class='lightblue'>{</span></HTML>
-		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82
+		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>82</span>
 	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 	
 	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
 	<HTML><span class='lightblue'>{</span></HTML>
-		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138
+		<HTML><span class='lightblue'>"</span><span class="purple">pokemon_pokeNo</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138</span>
 	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 	
 <HTML><span class='lightblue'>]</span></HTML>  	
 
 
 The following is a sample response from the <HTML><span class='red'>/party/delete</span></HTML> endpoint:
 <HTML><span class='lightblue'>[</span></HTML>
-	<HTML><span class='lightblue'>[</span></HTML>
-		<HTML><span class='lightblue'>{</span></HTML>
-			<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>47
-		<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
-		<HTML><span class='lightblue'>{</span></HTML>
-			<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138
-		<HTML><span class='lightblue'>{</span></HTML>
-	
-	
-		<HTML><span class='lightblue'>]</span></HTML>
 	<HTML><span class='lightblue'>{</span></HTML>
-		<HTML><span class='lightblue'>"</span><span class="purple">fieldCount</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">affectedRows</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">insertId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">serverStatus</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>2</span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">warningCount</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">message</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'></span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">protocol41</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>true</span><span class='blue'>,</span>
-		<HTML><span class='lightblue'>"</span><span class="purple">changedRows</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>0</span><span class='blue'>,</span>
-	<HTML><span class='lightblue'>}</span></HTML>  		
-<HTML><span class='lightblue'>]</span>
+		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>47</span>
+	<HTML><span class='lightblue'>}</span></HTML><span class='blue'>,</span> 		
+	<HTML><span class='lightblue'>{</span></HTML>
+		<HTML><span class='lightblue'>"</span><span class="purple">partyId</span><span class="lightblue">"</span></HTML><span class='blue'>:</span> <span class='orange'>138</span>
+	<HTML><span class='lightblue'>{</span></HTML>
+<HTML><span class='lightblue'>]</span></HTML>
 
 
 The following is a sample response from the <HTML><span class='red'>/party/create</span></HTML> endpoint:
@@ -522,7 +507,7 @@ The following is a sample response from the <HTML><span class='red'>/party/creat
 				</div>
 			</div>
 			<div id='party-Response'></div>
-		</section>
+		</div>
 	</div>
 </body>
 </html>

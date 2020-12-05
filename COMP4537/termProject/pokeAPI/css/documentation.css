@@ -11,9 +11,22 @@
     text-align: center;
 }
 
+#user-section,
+#pokemon-section,
+#trainer-section,
+#party-section,
+#top-section {
+    width: 90%;
+}
 
-.head-table, .head-table, tr, th, td {
+
+.head-table, th, td {
     text-align: center;
+    vertical-align: middle;
+}
+
+table{
+    width:100%;
 }
 
 span,
@@ -27,16 +40,21 @@ span:hover {
 
 .endpoint-container{
     display: flex;
-    flex-direction:column;
-}
-.td-endpoint{
-    display: flex;
-    flex-direction:row;
+    flex-direction: column;
 }
 
-.http-type{
-    height: 35px;
-    width: 40px;
+.td-endpoint{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+.http-type {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
 }
 
 .endpoint-container > child {
@@ -69,15 +87,12 @@ table, tr, th {
     padding: 8px;
 }
 
-table, pre {
-    width: 90%;
-}
-
 th{
     background-color: #f2f2f2;
     font-weight: bolder;
     font-size: 24px;
 }
+
 tr:nth-child(even){background-color: #f2f2f2;}
 
 .td-endpoint {
@@ -101,6 +116,14 @@ pre code {
     padding: 20px;
     border-radius: 4px;
     color: white;
+
+    /* wrap the pretext code */
+    overflow-x: auto;
+    white-space: pre-wrap;
+    white-space: -moz-pre-wrap;
+    white-space: -pre-wrap;
+    white-space: -o-pre-wrap;
+    word-wrap: break-word;
 }
 
 p {
