@@ -48,7 +48,37 @@
 				<img src="images/poke.svg.png">
 			</div>
 			<div class="content-bottom">
-				<form action="#" method="post">
+				<div id="create" style="display:none; width:100%;">
+					<div class="field-group">
+						<div class="wthree-field">
+							<input id="firstName" type="text" value="" placeholder="First Name" required>
+						</div>
+					</div>
+					<div class="field-group">
+						<div class="wthree-field">
+							<input id="lastName" type="text" placeholder="Last Name">
+						</div>
+					</div>
+					<div class="field-group">
+						<div class="wthree-field">
+							<input id="email" type="email" placeholder="Email">
+						</div>
+					</div>
+					<div class="field-group">
+						<div class="wthree-field">
+							<input id="password" type="password" placeholder="Password">
+						</div>
+					</div>
+					<div class="field-group">
+						<div class="wthree-field">
+							<input id="userName" type="text" placeholder="Username">
+						</div>
+					</div>
+					<div class="wthree-field">
+						<button class="btn" onclick="createfetch(document.getElementById('firstName').value, document.getElementById('lastName').value, document.getElementById('password').value, document.getElementById('email').value, document.getElementById('userName').value)">Create User</button>
+					</div>
+				</div>
+				<div id="login">
 					<div class="field-group">
 						<span class="fa fa-user" aria-hidden="true"></span>
 						<div class="wthree-field">
@@ -62,7 +92,7 @@
 						</div>
 					</div>
 					<div class="wthree-field">
-                        <button type="submit" class="btn">Get Started</button>
+                        <button class="btn" onclick="authfetch(document.getElementById('text1').value, document.getElementById('myInput').value)">Login</button>
 					</div>
 					<ul class="list-login">
 						<li>
@@ -70,18 +100,15 @@
 						</li>
 						<li class="clearfix"></li>
 					</ul>
-					<ul class="list-login-bottom">
-						<li style="text-align: center; display:flex; align-items: center; justify-content: center;">
-							<a href="#" class="">Create Account</a>
-						</li>
-						
-					</ul>
-				</form>
+					<div class="wthree-field" style="margin-top:-50px;">
+						<button class="btn" onclick="myFunction()">New User</button>
+					</div>
+				</div>
 			</div>
 		</div>
     </div>
 </section>
 
-	<scrip src='./js/index.js'></script>
+	<script src='./js/index.js'></script>
 </body>
 </html>
