@@ -7,6 +7,7 @@ const authfetch = (email, password) =>
     fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/login", 
         {
             method: 'GET',
+            mode: 'cors',
             headers: 
             {
                 "Accept": "application/json",
