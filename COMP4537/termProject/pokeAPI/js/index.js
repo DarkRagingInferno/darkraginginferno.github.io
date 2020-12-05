@@ -10,13 +10,11 @@ const authfetch = (email, password) =>
             method: 'POST',
             headers: 
             {
-                // "Accept": "application/json",
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
+                "Accept": "application/json",
+                "Content-Type": "application/json",
                 "email": email,
                 "password": password
-            })
+            },
         })
         .then(response => {
             if(response.status == 200){
