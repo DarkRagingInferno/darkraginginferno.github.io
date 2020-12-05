@@ -55,6 +55,7 @@ span:hover {
     align-items: center;
     height: 50px;
     width: 50px;
+    margin: 5px;
 }
 
 .endpoint-container > child {
@@ -82,7 +83,7 @@ span:hover {
     background-color: #604771;
 }
 
-table, tr, th {
+table, td, th {
     border: 1px solid #ddd;
     padding: 8px;
 }
