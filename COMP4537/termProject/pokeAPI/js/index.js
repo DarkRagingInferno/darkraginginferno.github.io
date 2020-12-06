@@ -79,6 +79,9 @@ const createfetch = (firstName, lastName, password, email, userName) =>
 {
     let userInfoList = [firstName, lastName, password, userName];
     let userEmail = email;
+
+    alert(stringValidation(userInfo));
+    
     if(!stringValidation(userInfoList)) return;
     if(!validateEmail(userEmail)) 
     {
