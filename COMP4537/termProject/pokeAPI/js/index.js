@@ -122,7 +122,7 @@ const createfetch = (firstName, lastName, password, email, userName) =>
         .catch((error) => 
         {
            
-            if(error == 'Error: 500')
+            if(error == 'Error: 400')
                 alert(error +  " Must enter proper values in the fields"); 
             else
                 alert(error +  " User Already Exists");
