@@ -407,7 +407,7 @@ const updateTrainer = (firstName, lastName, email) =>
 const deleteTrainer = () => 
 {
     var r = prompt("Are you sure you wish to delete this account? If so, please enter your password");
-    if (r == true) {
+    // if (r == true) {
         fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/delete", 
         {
             method: 'DELETE',
@@ -439,8 +439,8 @@ const deleteTrainer = () =>
         {
             alert(error + " Failed to delete account.")
         });
-    } else {
-    }
+    // } else {
+    // }
     
 }
 
