@@ -121,6 +121,7 @@ const createfetch = (firstName, lastName, password, email, userName) =>
         })
         .catch((error) => 
         {
+            console.log(error)
             alert(error +  " User Already Exists");
         });
 }
