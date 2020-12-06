@@ -40,13 +40,13 @@ const authfetch = (email, password) =>
 
 const stringValidation = (userInfoList) => {
     let userInfo = userInfoList
-    userInfo.foreach( e => {
+    userInfo.forEach( e => {
         e.trim()
     })
 
     for(let i = 0; i < userInfo.length; i++)
     {
-        if (i[0] == "") 
+        if ( i[0] == "") 
         {
             alert("Must enter proper values for First Name field");
             return false;
