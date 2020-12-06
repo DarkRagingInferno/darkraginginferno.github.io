@@ -48,22 +48,22 @@ const stringValidation = (userInfoList) => {
     {
         if (i[0] == "") 
         {
-            alert("Must enter proper valus for First Name field");
+            alert("Must enter proper values for First Name field");
             return false;
         }
         else if( i[1] == "") 
         {
-            alert("Must enter proper valus for Last Name field");
+            alert("Must enter proper values for Last Name field");
             return false;
         }
         else if (i[2] == "") 
         {
-            alert("Must enter proper valus for Password field");
+            alert("Must enter proper values for Password field");
             return false;
         }
         else if (i[3] == "") 
         {
-            alert("Must enter proper valus for Username field");
+            alert("Must enter proper values for Username field");
             return false;
         }
         return true;
@@ -79,9 +79,8 @@ const createfetch = (firstName, lastName, password, email, userName) =>
 {
     let userInfoList = [firstName, lastName, password, userName];
     let userEmail = email;
-    alert(validateEmail(userEmail));
     if(!stringValidaton(userInfoList)) return;
-    if(!validateEmail(userEmail)) return;
+    if(!validateEmail(userEmail)) return alert("Must enter proper Email ");
      
     fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/create", 
         {
