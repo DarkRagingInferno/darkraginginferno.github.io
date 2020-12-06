@@ -4,6 +4,7 @@
 
 const authfetch = (email, password) => 
 {
+    console.log(email, password)
     fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/login", 
         {
             method: 'GET',
@@ -13,7 +14,7 @@ const authfetch = (email, password) =>
                 "Content-Type": "application/json",
                 "email": email,
                 "password": password
-            }
+            },
         })
         .then(response => {
             if(response.status == 200){
