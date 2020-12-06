@@ -40,9 +40,7 @@ const authfetch = (email, password) =>
 
 const stringValidation = (userInfoList) => {
     let userInfo = userInfoList
-    userInfo.forEach( e => {
-        e.trim()
-    })
+    userInfo.forEach( e => { e.trim() })
 
     if ( userInfo[0] == "") 
     {
@@ -77,12 +75,12 @@ const createfetch = (firstName, lastName, password, email, userName) =>
     let userInfoList = [firstName, lastName, password, userName];
     let userEmail = email;
 
-    // if(!stringValidation(userInfoList)) return;
-    // if(!validateEmail(userEmail)) 
-    // {
-    //     alert("Must enter proper Email ");
-    //     return; 
-    // }
+    if(!stringValidation(userInfoList)) return;
+    if(!validateEmail(userEmail)) 
+    {
+        alert("Must enter proper Email ");
+        return; 
+    }
 
     fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/create", 
         {
