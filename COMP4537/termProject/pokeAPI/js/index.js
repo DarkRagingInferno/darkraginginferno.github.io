@@ -406,7 +406,7 @@ const updateTrainer = (firstName, lastName, email) =>
 
 const deleteTrainer = () => 
 {
-    var r = confirm("Are you sure you wish to delete this account?");
+    var r = prompt("Are you sure you wish to delete this account? If so, please enter your password");
     if (r == true) {
         fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/delete", 
         {
@@ -416,7 +416,10 @@ const deleteTrainer = () =>
                 "Accept": "application/json",
                 "Content-Type": "application/json",
                 "Authorization": "JWT " + window.localStorage.getItem("token")
-            }
+            },
+            body: JSON.stringify({
+                "password": r
+            })
         })
         .then(response => {
             if(response.status == 200){
