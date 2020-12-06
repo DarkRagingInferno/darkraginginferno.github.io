@@ -79,7 +79,7 @@ const createfetch = (firstName, lastName, password, email, userName) =>
 {
     let userInfoList = [firstName, lastName, password, userName];
     let userEmail = email;
-    if(!stringValidaton(userInfoList)) return;
+    if(!stringValidation(userInfoList)) return;
     if(!validateEmail(userEmail)) 
     {
         alert("Must enter proper Email ");
