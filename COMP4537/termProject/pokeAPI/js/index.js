@@ -78,10 +78,10 @@ const validateEmail = (email) => {
 const createfetch = (firstName, lastName, password, email, userName) => 
 {
     let userInfoList = [firstName, lastName, password, userName];
-    let email = email;
-    alert(validateEmail(email));
+    let userEmail = email;
+    alert(validateEmail(userEmail));
     if(!stringValidaton(userInfoList)) return;
-    if(!validateEmail(email)) return;
+    if(!validateEmail(userEmail)) return;
      
     fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/create", 
         {
