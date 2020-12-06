@@ -38,8 +38,51 @@ const authfetch = (email, password) =>
         });
 }
 
+const stringValidation = (userInfoList) => {
+    let userInfo = userInfoList
+    userInfo.foreach( e => {
+        e.trim()
+    })
+
+    for(let i = 0; i < userInfo.length; i++)
+    {
+        if (i[0] == "") 
+        {
+            alert("Must enter proper valus for First Name field");
+            return false;
+        }
+        else if( i[1] == "") 
+        {
+            alert("Must enter proper valus for Last Name field");
+            return false;
+        }
+        else if (i[2] == "") 
+        {
+            alert("Must enter proper valus for Password field");
+            return false;
+        }
+        else if (i[3] == "") 
+        {
+            alert("Must enter proper valus for Username field");
+            return false;
+        }
+        return true;
+    }
+}
+
+const validateEmail = (email) => {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
+
 const createfetch = (firstName, lastName, password, email, userName) => 
 {
+    let userInfoList = [firstName, lastName, password, userName];
+    let email = email;
+    alert(validateEmail(email));
+    if(!stringValidaton(userInfoList)) return;
+    if(!validateEmail(email)) return;
+     
     fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/create", 
         {
             method: 'POST',
@@ -407,6 +450,7 @@ const updateTrainer = (firstName, lastName, email) =>
 const deleteTrainer = () => 
 {
     var r = prompt("Are you sure you wish to delete this account? If so, please enter your password");
+    console.log(r);
     // if (r == true) {
         fetch("https://pokeapi-amar-john.herokuapp.com/api/v1/trainer/delete", 
         {
