@@ -44,30 +44,27 @@ const stringValidation = (userInfoList) => {
         e.trim()
     })
 
-    for(let i = 0; i < userInfo.length; i++)
+    if ( userInfo[0] == "") 
     {
-        if ( userInfo[0] == "") 
-        {
-            alert("Must enter proper values for First Name field");
-            return false;
-        }
-        else if( userInfo[1] == "") 
-        {
-            alert("Must enter proper values for Last Name field");
-            return false;
-        }
-        else if (userInfo[2] == "") 
-        {
-            alert("Must enter proper values for Password field");
-            return false;
-        }
-        else if (userInfo[3] == "") 
-        {
-            alert("Must enter proper values for Username field");
-            return false;
-        }
-        return true;
+        alert("Must enter proper values for First Name field");
+        return false;
     }
+    else if( userInfo[1] == "") 
+    {
+        alert("Must enter proper values for Last Name field");
+        return false;
+    }
+    else if (userInfo[2] == "") 
+    {
+        alert("Must enter proper values for Password field");
+        return false;
+    }
+    else if (userInfo[3] == "") 
+    {
+        alert("Must enter proper values for Username field");
+        return false;
+    }
+    else return true;
 }
 
 const validateEmail = (email) => {
