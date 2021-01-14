@@ -9000,7 +9000,10 @@ h1, h2, h3, h4, h5,
       .project .text {
         opacity: 1; }
         .project .text span {
-          color: rgba(255, 255, 255, 0.8); } }
+          color: rgba(255, 255, 255, 0.8); } 
+      .text {
+        display: flex;
+        flex-wrap: wrap; } }
   .project:hover .overlay, .project:focus .overlay {
     opacity: .9; }
   .project:hover .text, .project:focus .text {
@@ -9708,4 +9711,12 @@ textarea.form-control {
 
 .skill-item:hover > h2 {
   color: white
+}
+
+@media(hover: hover) and (pointer: focus)
+{
+  .project:hover .overlay, .project:focus .overlay {
+    opacity: .9; }
+  .project:hover .text, .project:focus .text {
+    opacity: 1; }
 }
