@@ -9692,6 +9692,11 @@ textarea.form-control {
   margin-bottom: 40px;
 }
 
+.skill-item {
+  display:flex;
+  width: 50%;
+}
+
 .skills-heading {
   font-weight: bolder;
   font-size: 3rem;
