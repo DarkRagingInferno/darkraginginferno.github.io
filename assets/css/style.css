@@ -9714,14 +9714,3 @@ textarea.form-control {
 .skill-item:hover > h2 {
   color: white
 }
-
-.overflow {
-  overflow: scroll
-}
-/* @media(hover: hover) and (pointer: focus)
-{
-  .project:hover .overlay, .project:focus .overlay {
-    opacity: .9; }
-  .project:hover .text, .project:focus .text {
-    opacity: 1; }
-} */
