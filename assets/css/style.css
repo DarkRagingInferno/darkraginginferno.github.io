@@ -9687,6 +9687,7 @@ textarea.form-control {
   display: flex;
   flex-direction: row;
   flex: 1;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 40px;
 }
@@ -9697,4 +9698,11 @@ textarea.form-control {
   margin-bottom: 30px;
 }
 
-.icon-
+.skill-item:hover {
+  background-color: blue;
+  color: white !important;
+}
+
+.skill-item:hover > h2 {
+  color: white
+}
