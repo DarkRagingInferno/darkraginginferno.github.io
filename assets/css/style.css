@@ -9692,20 +9692,18 @@ textarea.form-control {
   margin-bottom: 40px;
 }
 
-.skill-item {
-  display:flex;
-  width: 50%;
-}
-
 .skills-heading {
   font-weight: bolder;
   font-size: 3rem;
   margin-bottom: 30px;
 }
 
+.skill-item {
+  margin-bottom: 15px;
+}
+
 .skill-item:hover {
   background-color: #3E64FF;
-  color: white !important;
 }
 
 .skill-item:hover > h2 {
