@@ -9000,7 +9000,7 @@ h1, h2, h3, h4, h5,
       .project .text {
         opacity: 1; }
         .project .text span {
-          color: rgba(255, 255, 255, 0.8); } 
+          color: rgba(255, 255, 255, 0.8); } }
     @media (max-width: 480px) {
       .text {
         font-size: 18px;
