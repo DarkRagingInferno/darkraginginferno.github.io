@@ -9004,7 +9004,7 @@ h1, h2, h3, h4, h5,
       /* .text {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center }  */
+        justify-content: center }  */}
         
   .project:hover .overlay, .project:focus .overlay {
     opacity: .9; }
