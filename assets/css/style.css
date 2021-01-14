@@ -9716,7 +9716,7 @@ textarea.form-control {
 }
 
 .overflow {
-  overflow: auto
+  overflow: scroll
 }
 /* @media(hover: hover) and (pointer: focus)
 {
