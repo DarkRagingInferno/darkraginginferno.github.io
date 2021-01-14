@@ -9003,7 +9003,8 @@ h1, h2, h3, h4, h5,
           color: rgba(255, 255, 255, 0.8); } 
       .text {
         display: flex;
-        flex-wrap: wrap; } }
+        flex-wrap: wrap;
+        justify-content: center } }
   .project:hover .overlay, .project:focus .overlay {
     opacity: .9; }
   .project:hover .text, .project:focus .text {
