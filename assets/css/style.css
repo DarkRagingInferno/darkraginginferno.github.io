@@ -9001,10 +9001,11 @@ h1, h2, h3, h4, h5,
         opacity: 1; }
         .project .text span {
           color: rgba(255, 255, 255, 0.8); } 
-      .text {
+      /* .text {
         display: flex;
         flex-wrap: wrap;
-        justify-content: center } }
+        justify-content: center }  */
+        
   .project:hover .overlay, .project:focus .overlay {
     opacity: .9; }
   .project:hover .text, .project:focus .text {
@@ -9714,10 +9715,10 @@ textarea.form-control {
   color: white
 }
 
-@media(hover: hover) and (pointer: focus)
+/* @media(hover: hover) and (pointer: focus)
 {
   .project:hover .overlay, .project:focus .overlay {
     opacity: .9; }
   .project:hover .text, .project:focus .text {
     opacity: 1; }
-}
+} */
