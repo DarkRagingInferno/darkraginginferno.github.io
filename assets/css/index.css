@@ -1,0 +1,9 @@
+#projects-1,
+#projects-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.projects {
+    margin: 10px;
+}
